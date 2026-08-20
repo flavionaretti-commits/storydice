@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- STORYDICE! v0.6.4 — audio ciclico: digitale / realistico MP3 / muto -->
+<!-- STORYDICE! v0.6.5 — bilingue IT/EN + audio ciclico -->
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -34,7 +34,7 @@ body{min-height:100svh;overflow-x:hidden}
 .app:after{width:210px;height:120px;right:-90px;top:280px;background:#f18919;transform:rotate(-24deg)}
 .header{padding:max(12px,env(safe-area-inset-top)) 16px 4px;display:grid;grid-template-columns:48px 1fr auto;align-items:start;gap:8px}
 .headerTools{display:flex;gap:7px;justify-content:flex-end}
-.iconBtn{width:46px;height:46px;border-radius:50%;border:1px solid rgba(123,89,46,.18);background:rgba(255,250,239,.86);box-shadow:var(--soft);display:grid;place-items:center;font-size:23px;cursor:pointer;position:relative}.audioBadge{position:absolute;right:2px;bottom:2px;min-width:16px;height:16px;padding:0 3px;border-radius:999px;display:grid;place-items:center;background:#17345c;color:#fff;font:900 10px/1 system-ui,sans-serif;border:1.5px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.25)}.dark .audioBadge{border-color:#213149}.soundOff .audioBadge{display:none}
+.iconBtn{width:46px;height:46px;border-radius:50%;border:1px solid rgba(123,89,46,.18);background:rgba(255,250,239,.86);box-shadow:var(--soft);display:grid;place-items:center;font-size:23px;cursor:pointer;position:relative}.audioBadge{position:absolute;right:2px;bottom:2px;min-width:16px;height:16px;padding:0 3px;border-radius:999px;display:grid;place-items:center;background:#17345c;color:#fff;font:900 10px/1 system-ui,sans-serif;border:1.5px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.25)}.dark .audioBadge{border-color:#213149}.soundOff .audioBadge{display:none}.flagBall{width:25px;height:25px;border-radius:50%;display:block;position:relative;overflow:hidden;border:1px solid rgba(16,47,92,.12);box-shadow:inset 0 1px 1px rgba(255,255,255,.45),0 1px 2px rgba(0,0,0,.12)}.flag-it{background:linear-gradient(90deg,#009246 0 33.33%,#fff 33.33% 66.66%,#ce2b37 66.66%)}.flag-en{background:#fff}.flag-en:before,.flag-en:after{content:"";position:absolute;background:#cf142b}.flag-en:before{left:50%;top:0;width:28%;height:100%;transform:translateX(-50%)}.flag-en:after{left:0;top:50%;width:100%;height:28%;transform:translateY(-50%)}
 .brand{text-align:center;line-height:1}
 .brand h1{margin:2px 0 4px;font-size:clamp(34px,8vw,60px);letter-spacing:-2px;font-weight:1000;text-shadow:0 2px 0 rgba(255,255,255,.7)}
 .brand h1 span{color:#ef7f16}.brand p{margin:0;font-family:"Comic Sans MS",ui-rounded,cursive;font-size:clamp(14px,3.7vw,20px);font-weight:700}
@@ -68,7 +68,7 @@ body.dark .app{background:radial-gradient(circle at 20% 15%,rgba(55,112,156,.26)
 body.dark .iconBtn,body.dark .catCard,body.dark .secondary,body.dark .tabs,body.dark .expansionToggle,body.dark .configBox,body.dark .configRow,body.dark .startupSelect,body.dark .configNameInput{background:#213149;color:#f5f8fc;border-color:#40516a}.dark .tab.active{background:#2e66a1}.dark .stepBtn,.dark .miniStepper button{background:#32455f;color:#fff}.dark .helper{color:#b7c1cf}.dark .emptyState{background:rgba(16,27,42,.55)}
 .projection .panel{position:fixed;left:50%;bottom:max(8px,env(safe-area-inset-bottom));transform:translateX(-50%);width:auto;min-width:280px;padding:8px;border-radius:20px;background:rgba(255,250,239,.88)}
 .projection .panel .tabs,.projection .panel .modeContent,.projection .panel .helper,.projection #saveConfigBtn{display:none!important}.projection .actions{display:flex;margin:0}.projection .primary{font-size:19px;padding:11px 18px}.projection .secondary{display:block!important;padding:11px 14px}.projection .brand,.projection #themeBtn,.projection #soundBtn,.projection #infoBtn{opacity:.18}.projection #projectionBtn{opacity:1}.projection .table{padding-bottom:88px}.projection .diceField{max-width:1100px}
-@media (max-width:650px){.tab{font-size:13px;padding:11px 5px}.freeControls{gap:8px}.expansionToggle{font-size:12px;padding:7px 9px}.header{grid-template-columns:42px 1fr auto}.headerTools{gap:5px}.iconBtn{width:40px;height:40px;font-size:20px}.table{min-height:300px;padding-left:10px;padding-right:10px}.diceField{min-height:300px;gap:22px 26px;padding:10px 2px}.categoryGrid{grid-template-columns:repeat(3,1fr);gap:6px}.catName{font-size:11px}.panel{border-radius:23px 23px 18px 18px}.actions{grid-template-columns:1fr 1fr}.secondary{font-size:11px;padding-left:5px;padding-right:5px}}
+@media (max-width:650px){.brand{min-width:0}.brand h1{font-size:clamp(28px,8vw,38px)}.header{grid-template-columns:38px minmax(88px,1fr) auto!important;gap:4px}.headerTools{gap:3px!important}.iconBtn{width:36px!important;height:36px!important;font-size:18px!important}.tab{font-size:13px;padding:11px 5px}.freeControls{gap:8px}.expansionToggle{font-size:12px;padding:7px 9px}.header{grid-template-columns:42px 1fr auto}.headerTools{gap:5px}.iconBtn{width:40px;height:40px;font-size:20px}.table{min-height:300px;padding-left:10px;padding-right:10px}.diceField{min-height:300px;gap:22px 26px;padding:10px 2px}.categoryGrid{grid-template-columns:repeat(3,1fr);gap:6px}.catName{font-size:11px}.panel{border-radius:23px 23px 18px 18px}.actions{grid-template-columns:1fr 1fr}.secondary{font-size:11px;padding-left:5px;padding-right:5px}}
 @media (max-height:640px) and (orientation:landscape){body{overflow:auto}.app{min-height:100svh}.header{position:absolute;z-index:5;left:0;right:0;padding:6px 10px;grid-template-columns:40px 1fr auto;pointer-events:none}.header .iconBtn{pointer-events:auto}.brand h1{font-size:29px}.brand p{display:none}.table{min-height:100svh;padding:48px 340px 12px 12px;align-items:center}.diceField{min-height:calc(100svh - 60px);gap:16px 22px}.panel{position:fixed;right:8px;top:8px;bottom:8px;width:320px;margin:0;overflow:auto;border-radius:22px;padding:8px}.categoryGrid{grid-template-columns:repeat(3,1fr)}.primary{font-size:20px;padding:11px}.secondary{padding:9px 5px}.modeContent{padding:7px 0}.helper{display:none}.projection .table{padding:48px 12px 76px}.projection .panel{top:auto;right:auto;bottom:8px;width:auto;min-width:300px;height:auto}}
 
 /* STORYDICE! v0.4 — 144 emoji, personalizzazione e mai ripetizioni */
@@ -131,6 +131,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
     <div class="brand"><h1>STORYDICE<span>!</span></h1><p>Lancia i dadi e inventa una storia</p></div>
     <div class="headerTools">
       <button class="iconBtn" id="projectionBtn" aria-label="Modalità proiezione" title="Proiezione">⛶</button>
+      <button class="iconBtn" id="langBtn" aria-label="Lingua: Italiano" title="Passa all'inglese"><span class="flagBall flag-it" aria-hidden="true"></span></button>
       <button class="iconBtn" id="soundBtn" aria-label="Suoni">🔊</button>
       <button class="iconBtn" id="infoBtn" aria-label="Informazioni e istruzioni">ⓘ</button>
     </div>
@@ -249,7 +250,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
 <div class="modalOverlay hidden" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
   <div class="customModal infoModal">
     <div class="customHeader">
-      <div><small>STORYDICE! · v0.6.4</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
+      <div><small>STORYDICE! · v0.6.5</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
       <button class="closeModal" id="closeInfo" aria-label="Chiudi">×</button>
     </div>
     <div class="infoBody">
@@ -472,7 +473,229 @@ const L={
   food_pear:'Pera',food_orange:'Arancia',food_watermelon:'Anguria',food_grapes:'Uva',food_strawberry:'Fragola',food_blueberries:'Mirtilli',food_pineapple:'Ananas',food_cherries:'Ciliegie',food_coconut:'Cocco',food_tomato:'Pomodoro',food_eggplant:'Melanzana',food_chili:'Peperoncino',food_corn:'Mais',food_carrot:'Carota',food_onion:'Cipolla',food_potato:'Patata',food_pretzel:'Pretzel',food_cheese:'Formaggio',food_egg:'Uovo',food_steak:'Bistecca',food_chicken:'Pollo',food_burger:'Hamburger',food_fries:'Patatine',food_pizza:'Pizza',
   fan_ghost:'Fantasma',fan_pumpkin:'Zucca',fan_alien:'Alieno',fan_invader:'Mostro alieno',fan_robot:'Robot',fan_magewoman:'Maga',fan_superhero:'Supereroe',fan_santa:'Babbo Natale',fan_vampire:'Vampiro',fan_wizard:'Mago',fan_zombie:'Zombie',fan_genie:'Genio',fan_mermaid:'Sirena',fan_fairy:'Fata',fan_unicorn:'Unicorno',fan_dragonface:'Testa di drago',fan_phoenix:'Fenice',fan_snowman:'Pupazzo di neve',fan_crystal:'Sfera di cristallo',fan_wand:'Bacchetta magica',fan_biohazard:'Pericolo biologico',fan_dragon:'Drago',fan_testtube:'Provetta',fan_alembic:'Alambicco'
 };
-function symbolMarkup(id){return EMOJI[id]?`<span class="emojiFace" role="img" aria-label="${L[id]||''}">${EMOJI[id]}</span>`:(I[id]||svg('<circle cx="12" cy="12" r="8"/>'));}
+const L_EN={
+  obj_balloon:"Balloon",
+  obj_graduation:"Graduation",
+  obj_ring:"Ring",
+  obj_sunglasses:"Sunglasses",
+  obj_umbrella:"Umbrella",
+  obj_toast:"Toast",
+  obj_telescope:"Telescope",
+  obj_scissors:"Scissors",
+  obj_football:"Ball",
+  obj_trophy:"Trophy",
+  obj_bin:"Trash can",
+  obj_microphone:"Microphone",
+  obj_gamepad:"Video game",
+  obj_chess:"Chess",
+  obj_bike:"Bicycle",
+  obj_plane:"Airplane",
+  obj_lifebuoy:"Lifebuoy",
+  obj_trafficlight:"Traffic light",
+  obj_ladder:"Ladder",
+  obj_phone:"Smartphone",
+  obj_compass:"Compass",
+  obj_flashlight:"Flashlight",
+  obj_tools:"Tools",
+  obj_key:"Key",
+  pla_circus:"Circus",
+  pla_castle:"Castle",
+  pla_cablecar:"Cable car",
+  pla_car:"Car",
+  pla_sailboat:"Sailboat",
+  pla_ferriswheel:"Ferris wheel",
+  pla_beach:"Beach",
+  pla_mountain:"Mountain",
+  pla_camping:"Campsite",
+  pla_desert:"Desert",
+  pla_factory:"Factory",
+  pla_hotel:"Hotel",
+  pla_church:"Church",
+  pla_museum:"Museum",
+  pla_temple:"Temple",
+  pla_railway:"Railway",
+  pla_neighborhood:"Neighborhood",
+  pla_cemetery:"Cemetery",
+  pla_bath:"Bathroom",
+  pla_toilet:"Toilet",
+  pla_livingroom:"Living room",
+  pla_bedroom:"Bedroom",
+  pla_supermarket:"Supermarket",
+  pla_newyork:"New York",
+  emo_happy:"Happy",
+  emo_sad:"Sad",
+  emo_angry:"Angry",
+  emo_love:"In love",
+  emo_scared:"Scared",
+  emo_silly:"Silly",
+  emo_sleepy:"Sleepy",
+  emo_bored:"Bored",
+  emo_surprised:"Surprised",
+  emo_nervous:"Nervous",
+  emo_embarrassed:"Embarrassed",
+  emo_moved:"Moved",
+  emo_star:"Excited",
+  emo_down:"Downhearted",
+  emo_giggle:"Amused",
+  emo_smile:"Cheerful",
+  emo_party:"Festive",
+  emo_flushed:"Astonished",
+  emo_pleading:"Pleading",
+  emo_thinking:"Thoughtful",
+  emo_shush:"Quiet",
+  emo_woozy:"Dizzy",
+  emo_sick:"Disgusted",
+  emo_ill:"Sick",
+  ani_dog:"Dog",
+  ani_mouse:"Mouse",
+  ani_panda:"Panda",
+  ani_tiger:"Tiger",
+  ani_pig:"Pig",
+  ani_chick:"Chick",
+  ani_monkey:"Monkey",
+  ani_eagle:"Eagle",
+  ani_owl:"Owl",
+  ani_bat:"Bat",
+  ani_horse:"Horse",
+  ani_wolf:"Wolf",
+  ani_bee:"Bee",
+  ani_caterpillar:"Caterpillar",
+  ani_butterfly:"Butterfly",
+  ani_snail:"Snail",
+  ani_ladybug:"Ladybug",
+  ani_ant:"Ant",
+  ani_spider:"Spider",
+  ani_snake:"Snake",
+  ani_crab:"Crab",
+  ani_whale:"Whale",
+  ani_elephant:"Elephant",
+  ani_cat:"Cat",
+  con_strength:"Strength",
+  con_identity:"Identity",
+  con_chaos:"Chaos",
+  con_mask:"Mask",
+  con_idea:"Idea",
+  con_justice:"Justice",
+  con_party:"Celebration",
+  con_link:"Connection",
+  con_security:"Security",
+  con_brokenheart:"Broken heart",
+  con_love:"Love",
+  con_peace:"Peace",
+  con_spirituality:"Spirituality",
+  con_balance:"Balance",
+  con_help:"Help",
+  con_forbidden:"Prohibition",
+  con_exclamation:"Attention",
+  con_question:"Question",
+  con_danger:"Danger",
+  con_recycle:"Recycling",
+  con_parking:"Parking",
+  con_music:"Music",
+  con_infinity:"Infinity",
+  con_registered:"Trademark",
+  nat_cactus:"Cactus",
+  nat_pine:"Pine tree",
+  nat_palm:"Palm tree",
+  nat_plant:"Plant",
+  nat_leaf:"Leaf",
+  nat_nest:"Nest",
+  nat_mushroom:"Mushroom",
+  nat_rose:"Rose",
+  nat_sun:"Sun",
+  nat_moon:"Moon",
+  nat_wave:"Sea",
+  nat_snow:"Snow",
+  nat_storm:"Thunderstorm",
+  nat_tornado:"Tornado",
+  nat_rainbow:"Rainbow",
+  nat_fire:"Fire",
+  nat_comet:"Shooting star",
+  nat_tracks:"Tracks",
+  nat_apple:"Apple",
+  nat_banana:"Banana",
+  nat_lemon:"Lemon",
+  nat_bread:"Bread",
+  nat_bone:"Bone",
+  nat_microbe:"Microbe",
+  spo_basket:"Basketball",
+  spo_football:"American football",
+  spo_tennis:"Tennis",
+  spo_climb:"Climbing",
+  spo_gym:"Gymnastics",
+  spo_boxing:"Boxing",
+  spo_diving:"Diving",
+  spo_archery:"Archery",
+  spo_pingpong:"Table tennis",
+  spo_billiards:"Billiards",
+  spo_hockey:"Hockey",
+  spo_martial:"Martial arts",
+  spo_skating:"Ice skating",
+  spo_rollers:"Roller skating",
+  spo_parachute:"Skydiving",
+  spo_ski:"Skiing",
+  spo_weights:"Weightlifting",
+  spo_fencing:"Fencing",
+  spo_golf:"Golf",
+  spo_horse:"Horse riding",
+  spo_surf:"Surfing",
+  spo_yoga:"Yoga",
+  spo_swim:"Swimming",
+  spo_cycle:"Cycling",
+  food_pear:"Pear",
+  food_orange:"Orange",
+  food_watermelon:"Watermelon",
+  food_grapes:"Grapes",
+  food_strawberry:"Strawberry",
+  food_blueberries:"Blueberries",
+  food_pineapple:"Pineapple",
+  food_cherries:"Cherries",
+  food_coconut:"Coconut",
+  food_tomato:"Tomato",
+  food_eggplant:"Eggplant",
+  food_chili:"Chili pepper",
+  food_corn:"Corn",
+  food_carrot:"Carrot",
+  food_onion:"Onion",
+  food_potato:"Potato",
+  food_pretzel:"Pretzel",
+  food_cheese:"Cheese",
+  food_egg:"Egg",
+  food_steak:"Steak",
+  food_chicken:"Chicken",
+  food_burger:"Hamburger",
+  food_fries:"French fries",
+  food_pizza:"Pizza",
+  fan_ghost:"Ghost",
+  fan_pumpkin:"Pumpkin",
+  fan_alien:"Alien",
+  fan_invader:"Space invader",
+  fan_robot:"Robot",
+  fan_magewoman:"Sorceress",
+  fan_superhero:"Superhero",
+  fan_santa:"Santa Claus",
+  fan_vampire:"Vampire",
+  fan_wizard:"Wizard",
+  fan_zombie:"Zombie",
+  fan_genie:"Genie",
+  fan_mermaid:"Mermaid",
+  fan_fairy:"Fairy",
+  fan_unicorn:"Unicorn",
+  fan_dragonface:"Dragon face",
+  fan_phoenix:"Phoenix",
+  fan_snowman:"Snowman",
+  fan_crystal:"Crystal ball",
+  fan_wand:"Magic wand",
+  fan_biohazard:"Biohazard",
+  fan_dragon:"Dragon",
+  fan_testtube:"Test tube",
+  fan_alembic:"Alembic"
+};
+let language='it';
+function symbolLabel(id){return language==='en'?(L_EN[id]||L[id]||id):(L[id]||id)}
+function catLabel(k){const en={objects:'OBJECTS',places:'PLACES',emotions:'EMOTIONS',animals:'ANIMALS',concepts:'CONCEPTS',nature:'NATURE',sport:'SPORT',food:'FOOD',fantasy:'FANTASY'};return language==='en'?(en[k]||allCategories?.[k]?.label||k):(allCategories?.[k]?.label||k)}
+function tr(it,en){return language==='en'?en:it}
+function symbolMarkup(id){return EMOJI[id]?`<span class="emojiFace" role="img" aria-label="${symbolLabel(id)}">${EMOJI[id]}</span>`:(I[id]||svg('<circle cx="12" cy="12" r="8"/>'));}
 
 const categories={
  objects:{label:'OGGETTI',hex:'#2675d8',icons:['obj_balloon','obj_graduation','obj_ring','obj_sunglasses','obj_umbrella','obj_toast','obj_telescope','obj_scissors','obj_football','obj_trophy','obj_bin','obj_microphone','obj_gamepad','obj_chess','obj_bike','obj_plane','obj_lifebuoy','obj_trafficlight','obj_ladder','obj_phone','obj_compass','obj_flashlight','obj_tools','obj_key']},
@@ -513,15 +736,15 @@ function syncConfigUI(){
 }
 function applyConfig(raw,{persist=true,clearDice=true}={}){let c=sanitizeConfig(raw);mode=c.mode;mixedCount=c.mixedCount;freeCount=c.freeCount;includeExpansions=c.includeExpansions;mixedIncludeExpansions=c.mixedIncludeExpansions;counts=clone(c.counts);customFaces=clone(c.customFaces);customEnabled=clone(c.customEnabled);syncConfigUI();if(clearDice){dice=[];renderDice(false)}if(persist)persistLastConfig()}
 function persistLastConfig(){safeSet(STORAGE.last,captureConfig())}
-function savePrefs(){safeSet(STORAGE.prefs,{startupMode,audioMode,soundOn:audioMode!=='off',theme:document.body.classList.contains('dark')?'dark':'light'})}
+function savePrefs(){safeSet(STORAGE.prefs,{startupMode,audioMode,soundOn:audioMode!=='off',theme:document.body.classList.contains('dark')?'dark':'light',language})}
 function loadSavedConfigs(){let a=safeGet(STORAGE.saved,[]);savedConfigs=Array.isArray(a)?a.filter(x=>x&&x.id&&x.name&&x.config).map(x=>({...x,config:sanitizeConfig(x.config)})):[]}
 function persistSavedConfigs(){safeSet(STORAGE.saved,savedConfigs)}
-function currentSummary(c=captureConfig()){c=sanitizeConfig(c);if(c.mode==='mixed')return `MISTA · ${c.mixedCount} dadi${c.mixedIncludeExpansions?' · espansioni':''}`;if(c.mode==='free')return `LIBERA · ${c.freeCount} dadi bianchi${c.includeExpansions?' · espansioni':''}`;let active=allKeys.filter(k=>c.counts[k]>0);let total=active.reduce((n,k)=>n+c.counts[k],0);let labels=active.slice(0,3).map(k=>`${allCategories[k].label} ${c.counts[k]}`);return `TEMATICA · ${total} dadi${labels.length?' · '+labels.join(', '):''}${active.length>3?'…':''}`}
+function currentSummary(c=captureConfig()){c=sanitizeConfig(c);if(c.mode==='mixed')return `${tr('MISTA','MIXED')} · ${c.mixedCount} ${tr('dadi','dice')}${c.mixedIncludeExpansions?` · ${tr('espansioni','expansions')}`:''}`;if(c.mode==='free')return `${tr('LIBERA','FREE')} · ${c.freeCount} ${tr('dadi bianchi','white dice')}${c.includeExpansions?` · ${tr('espansioni','expansions')}`:''}`;let active=allKeys.filter(k=>c.counts[k]>0);let total=active.reduce((n,k)=>n+c.counts[k],0);let labels=active.slice(0,3).map(k=>`${catLabel(k)} ${c.counts[k]}`);return `${tr('TEMATICA','THEMED')} · ${total} ${tr('dadi','dice')}${labels.length?' · '+labels.join(', '):''}${active.length>3?'…':''}`}
 function escapeHtml(s){return String(s).replace(/[&<>\"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[ch]))}
-function renderConfigList(){let list=document.getElementById('configList');if(!savedConfigs.length){list.innerHTML='<div class="configEmpty">Non hai ancora salvato configurazioni.<br>Assegna un nome a quella attuale e premi <b>SALVA ATTUALE</b>.</div>';return}list.innerHTML=savedConfigs.map(x=>`<div class="configRow" data-config-id="${x.id}"><button class="configStar ${x.favorite?'favorite':''}" data-config-action="favorite" title="Imposta come preferita">${x.favorite?'★':'☆'}</button><div class="configMeta"><strong>${escapeHtml(x.name)}</strong><small>${escapeHtml(currentSummary(x.config))}</small></div><div class="configActions"><button class="configAction load" data-config-action="load">CARICA</button><button class="configAction" data-config-action="rename">RINOMINA</button><button class="configAction danger" data-config-action="delete">ELIMINA</button></div></div>`).join('')}
+function renderConfigList(){let list=document.getElementById('configList');if(!savedConfigs.length){list.innerHTML=`<div class="configEmpty">${tr('Non hai ancora salvato configurazioni.<br>Assegna un nome a quella attuale e premi <b>SALVA ATTUALE</b>.','You have not saved any configurations yet.<br>Name the current one and press <b>SAVE CURRENT</b>.')}</div>`;return}list.innerHTML=savedConfigs.map(x=>`<div class="configRow" data-config-id="${x.id}"><button class="configStar ${x.favorite?'favorite':''}" data-config-action="favorite" title="${tr('Imposta come preferita','Set as favorite')}">${x.favorite?'★':'☆'}</button><div class="configMeta"><strong>${escapeHtml(x.name)}</strong><small>${escapeHtml(currentSummary(x.config))}</small></div><div class="configActions"><button class="configAction load" data-config-action="load">${tr('CARICA','LOAD')}</button><button class="configAction" data-config-action="rename">${tr('RINOMINA','RENAME')}</button><button class="configAction danger" data-config-action="delete">${tr('ELIMINA','DELETE')}</button></div></div>`).join('')}
 function openConfigModal(){document.getElementById('configName').value='';document.getElementById('startupMode').value=startupMode;renderConfigList();document.getElementById('configModal').classList.remove('hidden');setTimeout(()=>document.getElementById('configName').focus(),50);clickSound()}
 function closeConfigModal(){document.getElementById('configModal').classList.add('hidden');clickSound(420)}
-function restoreInitialState(){loadSavedConfigs();let prefs=safeGet(STORAGE.prefs,{});startupMode=['last','favorite','standard'].includes(prefs.startupMode)?prefs.startupMode:'last';audioMode=['digital','real','off'].includes(prefs.audioMode)?prefs.audioMode:(prefs.soundOn===false?'off':'digital');let dark=prefs.theme==='dark';document.body.classList.toggle('dark',dark);document.getElementById('themeBtn').textContent=dark?'☀':'☾';updateSoundButton();let chosen=null;if(startupMode==='favorite'){let f=savedConfigs.find(x=>x.favorite);chosen=f?f.config:safeGet(STORAGE.last,null)}else if(startupMode==='last')chosen=safeGet(STORAGE.last,null);if(chosen)applyConfig(chosen,{persist:false,clearDice:true});else syncConfigUI()}
+function restoreInitialState(){loadSavedConfigs();let prefs=safeGet(STORAGE.prefs,{});startupMode=['last','favorite','standard'].includes(prefs.startupMode)?prefs.startupMode:'last';audioMode=['digital','real','off'].includes(prefs.audioMode)?prefs.audioMode:(prefs.soundOn===false?'off':'digital');language=['it','en'].includes(prefs.language)?prefs.language:'it';let dark=prefs.theme==='dark';document.body.classList.toggle('dark',dark);document.getElementById('themeBtn').textContent=dark?'☀':'☾';updateSoundButton();let chosen=null;if(startupMode==='favorite'){let f=savedConfigs.find(x=>x.favorite);chosen=f?f.config:safeGet(STORAGE.last,null)}else if(startupMode==='last')chosen=safeGet(STORAGE.last,null);if(chosen)applyConfig(chosen,{persist:false,clearDice:true});else syncConfigUI();applyLanguage()}
 
 function toastMsg(s){toast.textContent=s;toast.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>toast.classList.remove('show'),1400)}
 function clickSound(freq=560,d=.04){if(audioMode==='off')return;try{const ac=new (window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(.12,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+d);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+d+.01)}catch(e){}}
@@ -548,9 +771,9 @@ function rollDuration(n){return audioMode==='real'?rollProfile(n).seconds:1.18}
 function updateSoundButton(){
   const b=document.getElementById('soundBtn');
   b.classList.toggle('soundOff',audioMode==='off');
-  if(audioMode==='digital'){b.innerHTML='🔊<span class="audioBadge">D</span>';b.title='Audio digitale · tocca per audio realistico';b.setAttribute('aria-label','Audio digitale')}
-  else if(audioMode==='real'){b.innerHTML='🔊<span class="audioBadge">R</span>';b.title='Audio realistico MP3 · tocca per disattivare';b.setAttribute('aria-label','Audio realistico MP3')}
-  else{b.textContent='🔇';b.title='Audio disattivato · tocca per audio digitale';b.setAttribute('aria-label','Audio disattivato')}
+  if(audioMode==='digital'){b.innerHTML='🔊<span class="audioBadge">D</span>';b.title=tr('Audio digitale · tocca per audio realistico','Digital audio · tap for realistic audio');b.setAttribute('aria-label',tr('Audio digitale','Digital audio'))}
+  else if(audioMode==='real'){b.innerHTML='🔊<span class="audioBadge">R</span>';b.title=tr('Audio realistico MP3 · tocca per disattivare','Realistic MP3 audio · tap to mute');b.setAttribute('aria-label',tr('Audio realistico MP3','Realistic MP3 audio'))}
+  else{b.textContent='🔇';b.title=tr('Audio disattivato · tocca per audio digitale','Audio off · tap for digital audio');b.setAttribute('aria-label',tr('Audio disattivato','Audio off'))}
 }
 function scheduleLandingFeedback(n){let ms=audioMode==='real'?Math.max(650,Math.round(rollProfile(n).seconds*1000-80)):900;setTimeout(vibrate,ms)}
 function vibrate(){if(navigator.vibrate)navigator.vibrate(28)}
@@ -567,24 +790,24 @@ function makeDie(kind,cat,icons){return {id:uuid(),kind,cat,icons:[...icons],fac
 function buildCategoryUI(){
   const baseGrid=document.getElementById('categoryGrid'),expGrid=document.getElementById('expansionGrid');baseGrid.innerHTML='';expGrid.innerHTML='';
   allKeys.forEach(k=>{let c=allCategories[k];let el=document.createElement('div');el.className='catCard'+(c.isExpansion?' expansionCard':'');el.style.color=c.hex;
-    el.innerHTML=`<div class="catIcon">${symbolMarkup(c.icons[0])}</div><div class="catName">${c.label}</div><div class="miniStepper"><button data-cat="${k}" data-delta="-1">−</button><b id="count-${k}">${counts[k]}</b><button data-cat="${k}" data-delta="1">+</button></div><div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?'✓ PERSONALIZZATO':'✎ PERSONALIZZA'}</button></div><div class="catStatus" id="status-${k}">${customEnabled[k]?'facce scelte da te':'AUTO · senza doppioni'}</div>`;
+    el.innerHTML=`<div class="catIcon">${symbolMarkup(c.icons[0])}</div><div class="catName">${catLabel(k)}</div><div class="miniStepper"><button data-cat="${k}" data-delta="-1">−</button><b id="count-${k}">${counts[k]}</b><button data-cat="${k}" data-delta="1">+</button></div><div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}</button></div><div class="catStatus" id="status-${k}">${customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates')}</div>`;
     (c.isExpansion?expGrid:baseGrid).appendChild(el)
   });
 }
 function refreshCategoryCard(k){
   const n=document.getElementById('count-'+k);if(n)n.textContent=counts[k];
-  const b=document.querySelector(`[data-custom="${k}"]`);if(b){b.classList.toggle('customized',customEnabled[k]);b.textContent=customEnabled[k]?'✓ PERSONALIZZATO':'✎ PERSONALIZZA'}
-  const s=document.getElementById('status-'+k);if(s)s.textContent=customEnabled[k]?'facce scelte da te':'AUTO · senza doppioni';
+  const b=document.querySelector(`[data-custom="${k}"]`);if(b){b.classList.toggle('customized',customEnabled[k]);b.textContent=customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}
+  const s=document.getElementById('status-'+k);if(s)s.textContent=customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates');
 }
 document.getElementById('themedPane').addEventListener('click',e=>{
-  const step=e.target.closest('button[data-cat]');if(step){let k=step.dataset.cat,d=+step.dataset.delta,old=counts[k],next=Math.max(0,Math.min(4,old+d));if(next===old)return;if(next>old&&customEnabled[k]){customEnabled[k]=false;toastMsg(`${allCategories[k].label}: aumento dadi → modalità AUTO`)}counts[k]=next;refreshCategoryCard(k);persistLastConfig();clickSound();return}
+  const step=e.target.closest('button[data-cat]');if(step){let k=step.dataset.cat,d=+step.dataset.delta,old=counts[k],next=Math.max(0,Math.min(4,old+d));if(next===old)return;if(next>old&&customEnabled[k]){customEnabled[k]=false;toastMsg(`${catLabel(k)}: ${tr('aumento dadi → modalità AUTO','more dice → AUTO mode')}`)}counts[k]=next;refreshCategoryCard(k);persistLastConfig();clickSound();return}
   const custom=e.target.closest('button[data-custom]');if(custom){openCustomizer(custom.dataset.custom)}
 });
 
 function allocateAutoCategory(cat,n){let selected=shuffle(allCategories[cat].icons).slice(0,n*6);return chunks(selected,6).map(f=>makeDie('category',cat,f))}
 function allocateThemedCategory(cat,n){if(!n)return[];if(customEnabled[cat]){let saved=(customFaces[cat]||[]).slice(0,n);if(saved.length===n&&saved.every(a=>a.length===6)&&new Set(saved.flat()).size===n*6)return saved.map(f=>makeDie('category',cat,f));customEnabled[cat]=false;refreshCategoryCard(cat)}return allocateAutoCategory(cat,n)}
 function freshMixedDice(){let keys=mixedIncludeExpansions?allKeys:catKeys,bag=keys.flatMap(k=>Array(4).fill(k));let cats=shuffle(bag).slice(0,mixedCount),pools=Object.fromEntries(keys.map(k=>[k,shuffle(allCategories[k].icons)])),cursor=Object.fromEntries(keys.map(k=>[k,0]));return cats.map(cat=>{let i=cursor[cat];cursor[cat]+=6;return makeDie('category',cat,pools[cat].slice(i,i+6))})}
-function freshFreeDice(){let pool=shuffle([...new Set(freeSymbolPool())]),need=freeCount*6;if(pool.length<need){toastMsg('Non ci sono abbastanza simboli unici');return[]}return chunks(pool.slice(0,need),6).map(f=>makeDie('free',null,f))}
+function freshFreeDice(){let pool=shuffle([...new Set(freeSymbolPool())]),need=freeCount*6;if(pool.length<need){toastMsg(tr('Non ci sono abbastanza simboli unici','Not enough unique symbols'));return[]}return chunks(pool.slice(0,need),6).map(f=>makeDie('free',null,f))}
 function freshThemedDice(){let out=[];allKeys.forEach(k=>out.push(...allocateThemedCategory(k,counts[k])));return out}
 function buildFreshDice(){return mode==='mixed'?freshMixedDice():mode==='free'?freshFreeDice():freshThemedDice()}
 
@@ -593,47 +816,93 @@ function dieSize(n){let landscape=innerWidth>innerHeight&&innerHeight<=700;if(la
 function renderDice(animate=true,rollCount=dice.length){
   emptyState.classList.toggle('hidden',dice.length>0);[...diceField.querySelectorAll('.dieWrap')].forEach(n=>n.remove());let size=dieSize(dice.length||6);
   dice.forEach((d,idx)=>{let isFree=d.kind==='free';let c=isFree?{label:'LIBERA',hex:'#f8f7f2'}:allCategories[d.cat],w=document.createElement('div');w.className='dieWrap'+(isFree?' freeDie':'')+(d.locked?' locked':'');w.style.setProperty('--die',size+'px');w.style.setProperty('--dieColor',c.hex);w.style.setProperty('--iconColor',isFree?'#17345c':'#fff');w.style.setProperty('--tilt',((idx%2?1:-1)*(2+idx%4))+'deg');w.dataset.id=d.id;
-    let faces=d.icons.map((ic,i)=>`<div class="face f${i}">${symbolMarkup(ic)}</div>`).join('');w.innerHTML=`<div class="lockBadge">🔒</div><div class="die">${faces}</div><div class="categoryDot" title="${c.label}"></div>`;diceField.appendChild(w);
+    let faces=d.icons.map((ic,i)=>`<div class="face f${i}">${symbolMarkup(ic)}</div>`).join('');w.innerHTML=`<div class="lockBadge">🔒</div><div class="die">${faces}</div><div class="categoryDot" title="${catLabel(d.cat)}"></div>`;diceField.appendChild(w);
     let dieEl=w.querySelector('.die'),[fx,fy]=orientation(d.face);if(animate&&!d.locked){let extraX=360*(2+Math.floor(Math.random()*2)),extraY=360*(2+Math.floor(Math.random()*3));let base=rollDuration(Math.max(1,rollCount));let dur=rollCount<=1?base:base*(.92+Math.random()*.08);dieEl.style.transition='none';dieEl.style.transform=`rotateX(${fx-extraX}deg) rotateY(${fy+extraY}deg) rotateZ(${Math.random()*120-60}deg)`;requestAnimationFrame(()=>requestAnimationFrame(()=>{dieEl.style.transition=`transform ${dur.toFixed(3)}s cubic-bezier(.16,.72,.2,1.08)`;dieEl.style.transform=`rotateX(${fx}deg) rotateY(${fy}deg) rotateZ(0deg)`}))}else dieEl.style.transform=`rotateX(${fx}deg) rotateY(${fy}deg) rotateZ(0deg)`;
   });
 }
-function rollFresh(){dice=buildFreshDice();if(!dice.length)return toastMsg('Scegli almeno un dado');dice.forEach(d=>d.face=Math.floor(Math.random()*6));let n=dice.length;diceSound(n);renderDice(true,n);scheduleLandingFeedback(n)}
-function rerollExisting(){if(!dice.length)return rollFresh();let movable=dice.filter(d=>!d.locked);if(!movable.length)return toastMsg('Tutti i dadi sono bloccati');movable.forEach(d=>d.face=Math.floor(Math.random()*6));let n=movable.length;diceSound(n);renderDice(true,n);scheduleLandingFeedback(n)}
+function rollFresh(){dice=buildFreshDice();if(!dice.length)return toastMsg(tr('Scegli almeno un dado','Choose at least one die'));dice.forEach(d=>d.face=Math.floor(Math.random()*6));let n=dice.length;diceSound(n);renderDice(true,n);scheduleLandingFeedback(n)}
+function rerollExisting(){if(!dice.length)return rollFresh();let movable=dice.filter(d=>!d.locked);if(!movable.length)return toastMsg(tr('Tutti i dadi sono bloccati','All dice are locked'));movable.forEach(d=>d.face=Math.floor(Math.random()*6));let n=movable.length;diceSound(n);renderDice(true,n);scheduleLandingFeedback(n)}
 
 // Personalizzatore TEMATICA
-function openCustomizer(cat){if(!counts[cat])return toastMsg('Imposta prima almeno 1 dado');editingCat=cat;editingDie=0;let n=counts[cat];draftFaces=customEnabled[cat]?(customFaces[cat]||[]).slice(0,n).map(a=>[...a]):Array.from({length:n},()=>[]);while(draftFaces.length<n)draftFaces.push([]);document.getElementById('customTitle').textContent=allCategories[cat].label;document.getElementById('customModalCard').style.setProperty('--activeCat',allCategories[cat].hex);document.getElementById('customModal').classList.remove('hidden');renderCustomizer();clickSound()}
+function openCustomizer(cat){if(!counts[cat])return toastMsg(tr('Imposta prima almeno 1 dado','Set at least 1 die first'));editingCat=cat;editingDie=0;let n=counts[cat];draftFaces=customEnabled[cat]?(customFaces[cat]||[]).slice(0,n).map(a=>[...a]):Array.from({length:n},()=>[]);while(draftFaces.length<n)draftFaces.push([]);document.getElementById('customTitle').textContent=catLabel(cat);document.getElementById('customModalCard').style.setProperty('--activeCat',allCategories[cat].hex);document.getElementById('customModal').classList.remove('hidden');renderCustomizer();clickSound()}
 function closeCustomizer(){document.getElementById('customModal').classList.add('hidden');editingCat=null;draftFaces=[];clickSound(420)}
 function usedElsewhere(sym){return draftFaces.some((arr,i)=>i!==editingDie&&arr.includes(sym))}
 function renderCustomizer(){if(!editingCat)return;let c=allCategories[editingCat];document.getElementById('dieTabs').style.gridTemplateColumns=`repeat(${draftFaces.length},1fr)`;document.getElementById('dieTabs').innerHTML=draftFaces.map((a,i)=>`<button class="dieTab ${i===editingDie?'active':''} ${a.length===6?'complete':''}" data-dietab="${i}">Dado ${i+1}</button>`).join('');
   let active=draftFaces[editingDie]||[];document.getElementById('faceSlots').innerHTML=Array.from({length:6},(_,i)=>{let s=active[i];return `<div class="faceSlot ${s?'filled':''}"><span class="slotNum">${i+1}</span>${s?`<div class="slotSymbol">${symbolMarkup(s)}</div>`:''}</div>`}).join('');
-  document.getElementById('symbolPicker').innerHTML=c.icons.map(sym=>{let selected=active.includes(sym),used=usedElsewhere(sym);return `<button class="symbolChoice ${selected?'selected':''} ${used?'used':''}" data-symbol="${sym}" ${used?'disabled':''}><div class="symbolVisual">${symbolMarkup(sym)}</div><div class="symbolLabel">${L[sym]||sym}</div></button>`}).join('');
+  document.getElementById('symbolPicker').innerHTML=c.icons.map(sym=>{let selected=active.includes(sym),used=usedElsewhere(sym);return `<button class="symbolChoice ${selected?'selected':''} ${used?'used':''}" data-symbol="${sym}" ${used?'disabled':''}><div class="symbolVisual">${symbolMarkup(sym)}</div><div class="symbolLabel">${symbolLabel(sym)}</div></button>`}).join('');
   let complete=draftFaces.every(a=>a.length===6)&&new Set(draftFaces.flat()).size===draftFaces.length*6;document.getElementById('saveCustom').disabled=!complete;
 }
 document.getElementById('dieTabs').addEventListener('click',e=>{let b=e.target.closest('[data-dietab]');if(!b)return;editingDie=+b.dataset.dietab;renderCustomizer();clickSound()});
-document.getElementById('symbolPicker').addEventListener('click',e=>{let b=e.target.closest('[data-symbol]');if(!b||b.disabled)return;let sym=b.dataset.symbol,a=draftFaces[editingDie],idx=a.indexOf(sym);if(idx>=0)a.splice(idx,1);else{if(a.length>=6)return toastMsg('Questo dado ha già 6 facce');if(usedElsewhere(sym))return;a.push(sym)}renderCustomizer();clickSound(idx>=0?430:650)});
-document.getElementById('randomizeCustom').addEventListener('click',()=>{let pool=shuffle(allCategories[editingCat].icons).slice(0,draftFaces.length*6);draftFaces=chunks(pool,6);editingDie=0;renderCustomizer();clickSound(720);toastMsg('Dadi compilati senza ripetizioni')});
+document.getElementById('symbolPicker').addEventListener('click',e=>{let b=e.target.closest('[data-symbol]');if(!b||b.disabled)return;let sym=b.dataset.symbol,a=draftFaces[editingDie],idx=a.indexOf(sym);if(idx>=0)a.splice(idx,1);else{if(a.length>=6)return toastMsg(tr('Questo dado ha già 6 facce','This die already has 6 faces'));if(usedElsewhere(sym))return;a.push(sym)}renderCustomizer();clickSound(idx>=0?430:650)});
+document.getElementById('randomizeCustom').addEventListener('click',()=>{let pool=shuffle(allCategories[editingCat].icons).slice(0,draftFaces.length*6);draftFaces=chunks(pool,6);editingDie=0;renderCustomizer();clickSound(720);toastMsg(tr('Dadi compilati senza ripetizioni','Dice filled with no duplicates'))});
 document.getElementById('clearCustomDie').addEventListener('click',()=>{draftFaces[editingDie]=[];renderCustomizer();clickSound(400)});
-document.getElementById('saveCustom').addEventListener('click',()=>{if(draftFaces.some(a=>a.length!==6)||new Set(draftFaces.flat()).size!==draftFaces.length*6)return;customFaces[editingCat]=draftFaces.map(a=>[...a]);customEnabled[editingCat]=true;refreshCategoryCard(editingCat);persistLastConfig();toastMsg(`${allCategories[editingCat].label}: dadi personalizzati`);closeCustomizer()});
+document.getElementById('saveCustom').addEventListener('click',()=>{if(draftFaces.some(a=>a.length!==6)||new Set(draftFaces.flat()).size!==draftFaces.length*6)return;customFaces[editingCat]=draftFaces.map(a=>[...a]);customEnabled[editingCat]=true;refreshCategoryCard(editingCat);persistLastConfig();toastMsg(`${catLabel(editingCat)}: ${tr('dadi personalizzati','custom dice')}`);closeCustomizer()});
 document.getElementById('closeCustom').addEventListener('click',closeCustomizer);document.getElementById('customModal').addEventListener('click',e=>{if(e.target.id==='customModal')closeCustomizer()});
 
+
+function infoMarkup(){
+  if(language==='en')return `<div class="infoHero"><div class="bigDie">🎲</div><div><strong>Roll. Look. Imagine.</strong><span>Use the symbols you get to invent a story, a sentence, a dialogue or a creative challenge.</span></div></div>
+  <div class="infoSection"><h3>Three ways to play</h3><div class="infoModes"><div class="infoMode"><strong>◈ MIXED</strong><span>Randomly chooses dice from the categories. Each die keeps its category color.</span></div><div class="infoMode"><strong>◇ FREE</strong><span>Creates white dice: every face is drawn freely from all available categories.</span></div><div class="infoMode"><strong>◉ THEMED</strong><span>Choose how many dice to use for each category or expansion.</span></div></div></div>
+  <div class="infoSection"><h3>No duplicates</h3><p>Each symbol can appear <b>only once in the same roll</b>. Every category contains 24 symbols and supports up to four six-faced dice.</p></div>
+  <div class="infoSection"><h3>Customize the dice</h3><p>In THEMED mode press <b>CUSTOMIZE</b> under a category. You can choose the exact 6 faces of each die or use <b>RANDOM</b>. Symbols already used become unavailable on the other dice in the same category.</p></div>
+  <div class="infoSection"><h3>Lock and reroll</h3><p>After a roll, tap a die to 🔒 <b>lock it</b>. Press <b>REROLL</b> to roll only the unlocked dice. Tap a locked die again to unlock it.</p></div>
+  <div class="infoSection"><h3>Audio</h3><p>The audio button has three states: <b>🔊 D</b> = digital roll, <b>🔊 R</b> = realistic MP3 recording matched to the number of dice, <b>🔇</b> = audio off. Each tap moves to the next state.</p></div>
+  <div class="infoSection"><h3>Expansions</h3><p>SPORT, FOOD and FANTASY add 72 symbols to the base set. In MIXED and FREE modes you can include them with the dedicated checkbox; in THEMED mode you can use and customize them just like the base categories.</p></div>
+  <div class="infoSection"><h3>Save configurations</h3><p>Press <b>⭐ SAVE</b> to keep the combinations you use most often. You can load, rename and delete them, and mark one as your ⭐ favorite. The app can also reopen the last configuration automatically.</p></div>
+  <div class="infoSection"><h3>Projection</h3><p><b>PROJECTION</b> gives the dice as much screen space as possible and is designed for interactive whiteboards, monitors and shared screens.</p></div>
+  <div class="creditsBox"><strong>STORYDICE!</strong><span>Created by Flavio Naretti</span><small>Base set: 144 symbols · Expansions: 72 symbols · Total: 216</small></div>`;
+  return `<div class="infoHero"><div class="bigDie">🎲</div><div><strong>Lancia. Osserva. Immagina.</strong><span>Usa i simboli ottenuti per inventare una storia, una frase, un dialogo o una sfida creativa.</span></div></div>
+  <div class="infoSection"><h3>Tre modi di giocare</h3><div class="infoModes"><div class="infoMode"><strong>◈ MISTA</strong><span>Sceglie dadi casualmente tra le categorie. Ogni dado mantiene il proprio colore.</span></div><div class="infoMode"><strong>◇ LIBERA</strong><span>Crea dadi bianchi: ogni faccia pesca liberamente da tutte le categorie disponibili.</span></div><div class="infoMode"><strong>◉ TEMATICA</strong><span>Decidi quanti dadi usare per ciascuna categoria o espansione.</span></div></div></div>
+  <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b>. Ogni categoria contiene 24 simboli e permette fino a 4 dadi da 6 facce.</p></div>
+  <div class="infoSection"><h3>Personalizza i dadi</h3><p>In modalità TEMATICA premi <b>PERSONALIZZA</b> sotto una categoria. Puoi scegliere esattamente le 6 facce di ciascun dado oppure usare <b>CASUALE</b>. I simboli già usati diventano indisponibili sugli altri dadi della stessa categoria.</p></div>
+  <div class="infoSection"><h3>Blocca e rilancia</h3><p>Dopo un lancio, tocca un dado per 🔒 <b>bloccarlo</b>. Premi <b>RILANCIA</b> per tirare di nuovo solo quelli non bloccati. Un altro tocco sblocca il dado.</p></div>
+  <div class="infoSection"><h3>Audio</h3><p>Il pulsante audio in alto ha tre stati: <b>🔊 D</b> = lancio digitale, <b>🔊 R</b> = registrazione realistica MP3 sincronizzata al numero di dadi, <b>🔇</b> = audio disattivato. Ogni tocco passa allo stato successivo.</p></div>
+  <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli al set base. In MISTA e LIBERA puoi includerle con la casella dedicata; in TEMATICA puoi usarle e personalizzarle come le categorie base.</p></div>
+  <div class="infoSection"><h3>Salva configurazioni</h3><p>Premi <b>⭐ SALVA</b> per conservare le combinazioni che usi più spesso. Puoi caricarle, rinominarle, eliminarle e indicarne una come ⭐ preferita. L'app può anche riaprire automaticamente l'ultima configurazione usata.</p></div>
+  <div class="infoSection"><h3>Proiezione</h3><p><b>PROIEZIONE</b> dà più spazio possibile ai dadi ed è pensata per LIM, monitor e schermi condivisi.</p></div>
+  <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 72 simboli · Totale: 216</small></div>`;
+}
+function applyLanguage(){
+  document.documentElement.lang=language;
+  const lb=document.getElementById('langBtn');lb.innerHTML=`<span class="flagBall ${language==='en'?'flag-en':'flag-it'}" aria-hidden="true"></span>`;lb.title=tr("Passa all'inglese",'Switch to Italian');lb.setAttribute('aria-label',tr('Lingua: Italiano. Passa all\'inglese','Language: English. Switch to Italian'));
+  document.querySelector('.brand p').textContent=tr('Lancia i dadi e inventa una storia','Roll the dice and make up a story');
+  emptyState.innerHTML=`<strong>${tr('Pronto a raccontare?','Ready to tell a story?')}</strong><span>${tr('Scegli i dadi e premi <b>LANCIA I DADI</b>.','Choose your dice and press <b>ROLL DICE</b>.')}</span>`;
+  document.querySelector('[data-mode="mixed"]').innerHTML=`◈ &nbsp; ${tr('MISTA','MIXED')}`;document.querySelector('[data-mode="free"]').innerHTML=`◇ &nbsp; ${tr('LIBERA','FREE')}`;document.querySelector('[data-mode="themed"]').innerHTML=`◉ &nbsp; ${tr('TEMATICA','THEMED')}`;
+  document.querySelector('#mixedPane .countRow strong').textContent=tr('Numero di dadi','Number of dice');document.querySelector('#freePane .countRow strong').textContent=tr('Numero di dadi bianchi','Number of white dice');
+  document.querySelector('#mixedPane .expansionToggle span').textContent=tr('Includi espansioni','Include expansions');document.querySelector('#freePane .expansionToggle span').textContent=tr('Includi espansioni','Include expansions');
+  document.querySelector('#mixedPane .expansionToggle').title=tr('Se attivo, anche SPORT, CIBO e FANTASY possono essere scelti nella modalità Mista','If enabled, SPORT, FOOD and FANTASY can also be chosen in Mixed mode');document.querySelector('#freePane .expansionToggle').title=tr('Se attivo, SPORT, CIBO e FANTASY entrano nel sorteggio delle facce','If enabled, SPORT, FOOD and FANTASY are included when drawing faces');
+  document.querySelector('#mixedPane .freeNote').textContent=tr('Ogni dado appartiene a una categoria; nessun simbolo viene ripetuto.','Each die belongs to one category; no symbol is repeated.');document.querySelector('#freePane .freeNote').textContent=tr("Le facce pescano dall'intera collezione, sempre senza ripetizioni.",'Faces are drawn from the whole collection, always with no duplicates.');
+  const secs=document.querySelectorAll('#themedPane .sectionLabel');if(secs[0])secs[0].textContent=tr('SET BASE','BASE SET');if(secs[1])secs[1].textContent=tr('ESPANSIONI','EXPANSIONS');
+  document.getElementById('rollBtn').innerHTML=`🎲 &nbsp; ${tr('LANCIA I DADI','ROLL DICE')}`;document.getElementById('rerollBtn').innerHTML=`↻ &nbsp; ${tr('RILANCIA','REROLL')}`;document.getElementById('saveConfigBtn').innerHTML=`⭐ &nbsp; ${tr('SALVA','SAVE')}`;document.querySelector('.helper').textContent=tr('Tocca un dado per bloccarlo. Toccalo di nuovo per sbloccarlo.','Tap a die to lock it. Tap it again to unlock it.');
+  document.querySelector('#customModal .customHeader small').textContent=tr('PERSONALIZZA I DADI','CUSTOMIZE DICE');document.getElementById('customIntro').textContent=tr('Scegli esattamente 6 simboli per ogni dado. Un simbolo già usato non può essere scelto su un altro dado.','Choose exactly 6 symbols for each die. A symbol already used cannot be selected on another die.');document.getElementById('randomizeCustom').innerHTML=`🎲 ${tr('CASUALE','RANDOM')}`;document.getElementById('clearCustomDie').innerHTML=`⌫ ${tr('SVUOTA DADO','CLEAR DIE')}`;document.getElementById('saveCustom').innerHTML=`✓ ${tr('USA QUESTI DADI','USE THESE DICE')}`;document.querySelector('#customModal .customRule').textContent=tr('Regola fissa: nessun simbolo può comparire due volte nello stesso set di dadi.','Fixed rule: no symbol can appear twice in the same set of dice.');
+  document.querySelector('#configModal .customHeader small').textContent=tr('LE TUE IMPOSTAZIONI','YOUR SETTINGS');document.getElementById('configTitle').textContent=tr('Configurazioni','Configurations');document.querySelector('#configModal .configIntro').textContent=tr('Salva combinazioni di dadi e personalizzazioni per richiamarle in un attimo. Il risultato del lancio non viene salvato: ogni partita resta nuova.','Save dice combinations and customizations so you can recall them instantly. Roll results are not saved: every game stays fresh.');
+  const boxes=document.querySelectorAll('#configModal .configBoxTitle');if(boxes[0])boxes[0].textContent=tr('SALVA LA CONFIGURAZIONE ATTUALE','SAVE CURRENT CONFIGURATION');if(boxes[1])boxes[1].textContent=tr("ALL'AVVIO DELL'APP",'WHEN THE APP STARTS');if(boxes[2])boxes[2].textContent=tr('CONFIGURAZIONI SALVATE','SAVED CONFIGURATIONS');document.getElementById('configName').placeholder=tr('Es. Storia rapida, Fantasy, Classe 1A…','E.g. Quick story, Fantasy, Class 1A…');document.getElementById('saveCurrentConfig').textContent=tr('⭐ SALVA ATTUALE','⭐ SAVE CURRENT');document.querySelector('#configModal .startupRow label').textContent=tr('Riparti da','Start from');
+  const sm=document.getElementById('startupMode');sm.options[0].text=tr('Ultima configurazione usata','Last used configuration');sm.options[1].text=tr('Configurazione ⭐ preferita','⭐ Favorite configuration');sm.options[2].text=tr('Impostazione standard','Standard setup');document.querySelector('#configModal .localNote').textContent=tr('🔒 Le configurazioni restano solo in questo browser/dispositivo.','🔒 Configurations stay only in this browser/device.');
+  document.getElementById('infoTitle').textContent=tr('Informazioni e istruzioni','Information and instructions');document.querySelector('#infoModal .customHeader small').textContent='STORYDICE! · v0.6.5';document.querySelector('#infoModal .infoBody').innerHTML=infoMarkup();
+  document.querySelectorAll('.closeModal').forEach(b=>b.setAttribute('aria-label',tr('Chiudi','Close')));document.getElementById('themeBtn').setAttribute('aria-label',tr('Tema giorno/notte','Day/night theme'));updateSoundButton();
+  const p=document.getElementById('projectionBtn');p.setAttribute('aria-label',projection?tr('Esci dalla modalità proiezione','Exit projection mode'):tr('Modalità proiezione','Projection mode'));p.title=projection?tr('Esci da Proiezione','Exit Projection'):tr('Proiezione','Projection');
+  buildCategoryUI();if(editingCat){document.getElementById('customTitle').textContent=catLabel(editingCat);renderCustomizer()}if(!document.getElementById('configModal').classList.contains('hidden'))renderConfigList();
+}
+
 // Comandi principali
+document.getElementById('langBtn').addEventListener('click',()=>{language=language==='it'?'en':'it';savePrefs();applyLanguage();clickSound(680);toastMsg(language==='en'?'English':'Italiano')});
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{mode=t.dataset.mode;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===t));document.getElementById('mixedPane').classList.toggle('hidden',mode!=='mixed');document.getElementById('freePane').classList.toggle('hidden',mode!=='free');document.getElementById('themedPane').classList.toggle('hidden',mode!=='themed');persistLastConfig();clickSound()}));
 document.querySelectorAll('[data-mixed]').forEach(b=>b.addEventListener('click',()=>{mixedCount=Math.max(1,Math.min(12,mixedCount+(+b.dataset.mixed)));document.getElementById('mixedCount').textContent=mixedCount;persistLastConfig();clickSound()}));
 document.querySelectorAll('[data-free]').forEach(b=>b.addEventListener('click',()=>{freeCount=Math.max(1,Math.min(12,freeCount+(+b.dataset.free)));document.getElementById('freeCount').textContent=freeCount;persistLastConfig();clickSound()}));
-document.getElementById('includeExpansions').addEventListener('change',e=>{includeExpansions=e.target.checked;persistLastConfig();clickSound();toastMsg(includeExpansions?'LIBERA: espansioni incluse':'LIBERA: solo set base')});
-document.getElementById('mixedIncludeExpansions').addEventListener('change',e=>{mixedIncludeExpansions=e.target.checked;persistLastConfig();clickSound();toastMsg(mixedIncludeExpansions?'MISTA: espansioni incluse':'MISTA: solo set base')});
+document.getElementById('includeExpansions').addEventListener('change',e=>{includeExpansions=e.target.checked;persistLastConfig();clickSound();toastMsg(includeExpansions?tr('LIBERA: espansioni incluse','FREE: expansions included'):tr('LIBERA: solo set base','FREE: base set only'))});
+document.getElementById('mixedIncludeExpansions').addEventListener('change',e=>{mixedIncludeExpansions=e.target.checked;persistLastConfig();clickSound();toastMsg(mixedIncludeExpansions?tr('MISTA: espansioni incluse','MIXED: expansions included'):tr('MISTA: solo set base','MIXED: base set only'))});
 document.getElementById('rollBtn').addEventListener('click',rollFresh);document.getElementById('rerollBtn').addEventListener('click',rerollExisting);
-diceField.addEventListener('click',e=>{let w=e.target.closest('.dieWrap');if(!w)return;let d=dice.find(x=>x.id===w.dataset.id);if(!d)return;d.locked=!d.locked;w.classList.toggle('locked',d.locked);clickSound(d.locked?760:430);toastMsg(d.locked?'Dado bloccato':'Dado sbloccato')});
+diceField.addEventListener('click',e=>{let w=e.target.closest('.dieWrap');if(!w)return;let d=dice.find(x=>x.id===w.dataset.id);if(!d)return;d.locked=!d.locked;w.classList.toggle('locked',d.locked);clickSound(d.locked?760:430);toastMsg(d.locked?tr('Dado bloccato','Die locked'):tr('Dado sbloccato','Die unlocked'))});
 document.getElementById('themeBtn').addEventListener('click',()=>{document.body.classList.toggle('dark');document.getElementById('themeBtn').textContent=document.body.classList.contains('dark')?'☀':'☾';savePrefs();clickSound()});
-document.getElementById('soundBtn').addEventListener('click',()=>{const seq=['digital','real','off'];audioMode=seq[(seq.indexOf(audioMode)+1)%seq.length];if(audioMode!=='real')stopRealisticPlayers();updateSoundButton();savePrefs();if(audioMode==='digital'){clickSound(700);toastMsg('Audio: DIGITALE')}else if(audioMode==='real'){toastMsg('Audio: REALISTICO MP3')}else toastMsg('Audio: DISATTIVATO')});
-document.getElementById('projectionBtn').addEventListener('click',async()=>{projection=!projection;document.body.classList.toggle('projection',projection);const p=document.getElementById('projectionBtn');p.textContent=projection?'✕':'⛶';p.setAttribute('aria-label',projection?'Esci dalla modalità proiezione':'Modalità proiezione');p.title=projection?'Esci da Proiezione':'Proiezione';try{if(projection&&document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();else if(!projection&&document.fullscreenElement)await document.exitFullscreen()}catch(e){}clickSound()});
-document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&projection){projection=false;document.body.classList.remove('projection');const p=document.getElementById('projectionBtn');p.textContent='⛶';p.setAttribute('aria-label','Modalità proiezione');p.title='Proiezione'}});
+document.getElementById('soundBtn').addEventListener('click',()=>{const seq=['digital','real','off'];audioMode=seq[(seq.indexOf(audioMode)+1)%seq.length];if(audioMode!=='real')stopRealisticPlayers();updateSoundButton();savePrefs();if(audioMode==='digital'){clickSound(700);toastMsg(tr('Audio: DIGITALE','Audio: DIGITAL'))}else if(audioMode==='real'){toastMsg(tr('Audio: REALISTICO MP3','Audio: REALISTIC MP3'))}else toastMsg(tr('Audio: DISATTIVATO','Audio: OFF'))});
+document.getElementById('projectionBtn').addEventListener('click',async()=>{projection=!projection;document.body.classList.toggle('projection',projection);const p=document.getElementById('projectionBtn');p.textContent=projection?'✕':'⛶';p.setAttribute('aria-label',projection?tr('Esci dalla modalità proiezione','Exit projection mode'):tr('Modalità proiezione','Projection mode'));p.title=projection?tr('Esci da Proiezione','Exit Projection'):tr('Proiezione','Projection');try{if(projection&&document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();else if(!projection&&document.fullscreenElement)await document.exitFullscreen()}catch(e){}clickSound()});
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&projection){projection=false;document.body.classList.remove('projection');const p=document.getElementById('projectionBtn');p.textContent='⛶';p.setAttribute('aria-label',tr('Modalità proiezione','Projection mode'));p.title=tr('Proiezione','Projection')}});
 document.getElementById('saveConfigBtn').addEventListener('click',openConfigModal);
 document.getElementById('closeConfig').addEventListener('click',closeConfigModal);
 document.getElementById('configModal').addEventListener('click',e=>{if(e.target.id==='configModal')closeConfigModal()});
-document.getElementById('saveCurrentConfig').addEventListener('click',()=>{let input=document.getElementById('configName'),name=input.value.trim();if(!name)return toastMsg('Dai un nome alla configurazione');let same=savedConfigs.find(x=>x.name.toLocaleLowerCase('it')===name.toLocaleLowerCase('it'));if(same){same.config=captureConfig();same.updated=Date.now();toastMsg('Configurazione aggiornata')}else{savedConfigs.push({id:uuid(),name,config:captureConfig(),favorite:false,created:Date.now(),updated:Date.now()});toastMsg('Configurazione salvata')}persistSavedConfigs();persistLastConfig();input.value='';renderConfigList();clickSound(760)});
-document.getElementById('configList').addEventListener('click',e=>{let b=e.target.closest('[data-config-action]'),row=e.target.closest('[data-config-id]');if(!b||!row)return;let item=savedConfigs.find(x=>x.id===row.dataset.configId);if(!item)return;let action=b.dataset.configAction;if(action==='load'){applyConfig(item.config);closeConfigModal();toastMsg(`Caricata: ${item.name}`);return}if(action==='favorite'){savedConfigs.forEach(x=>x.favorite=x.id===item.id?!item.favorite:false);persistSavedConfigs();renderConfigList();toastMsg(item.favorite?'Configurazione preferita ⭐':'Preferita rimossa');clickSound(720);return}if(action==='rename'){let n=prompt('Nuovo nome della configurazione:',item.name);if(n===null)return;n=n.trim();if(!n)return toastMsg('Nome non valido');if(savedConfigs.some(x=>x.id!==item.id&&x.name.toLocaleLowerCase('it')===n.toLocaleLowerCase('it')))return toastMsg('Esiste già una configurazione con questo nome');item.name=n;item.updated=Date.now();persistSavedConfigs();renderConfigList();toastMsg('Configurazione rinominata');return}if(action==='delete'){if(!confirm(`Eliminare “${item.name}”?`))return;savedConfigs=savedConfigs.filter(x=>x.id!==item.id);persistSavedConfigs();renderConfigList();toastMsg('Configurazione eliminata')}});
-document.getElementById('startupMode').addEventListener('change',e=>{startupMode=e.target.value;savePrefs();clickSound();if(startupMode==='favorite'&&!savedConfigs.some(x=>x.favorite))toastMsg('Scegli una configurazione ⭐ preferita');else toastMsg('Avvio aggiornato')});
+document.getElementById('saveCurrentConfig').addEventListener('click',()=>{let input=document.getElementById('configName'),name=input.value.trim();if(!name)return toastMsg(tr('Dai un nome alla configurazione','Give the configuration a name'));let same=savedConfigs.find(x=>x.name.toLocaleLowerCase(language==='en'?'en':'it')===name.toLocaleLowerCase(language==='en'?'en':'it'));if(same){same.config=captureConfig();same.updated=Date.now();toastMsg(tr('Configurazione aggiornata','Configuration updated'))}else{savedConfigs.push({id:uuid(),name,config:captureConfig(),favorite:false,created:Date.now(),updated:Date.now()});toastMsg(tr('Configurazione salvata','Configuration saved'))}persistSavedConfigs();persistLastConfig();input.value='';renderConfigList();clickSound(760)});
+document.getElementById('configList').addEventListener('click',e=>{let b=e.target.closest('[data-config-action]'),row=e.target.closest('[data-config-id]');if(!b||!row)return;let item=savedConfigs.find(x=>x.id===row.dataset.configId);if(!item)return;let action=b.dataset.configAction;if(action==='load'){applyConfig(item.config);closeConfigModal();toastMsg(`${tr('Caricata','Loaded')}: ${item.name}`);return}if(action==='favorite'){savedConfigs.forEach(x=>x.favorite=x.id===item.id?!item.favorite:false);persistSavedConfigs();renderConfigList();toastMsg(item.favorite?tr('Configurazione preferita ⭐','Favorite configuration ⭐'):tr('Preferita rimossa','Favorite removed'));clickSound(720);return}if(action==='rename'){let n=prompt(tr('Nuovo nome della configurazione:','New configuration name:'),item.name);if(n===null)return;n=n.trim();if(!n)return toastMsg(tr('Nome non valido','Invalid name'));if(savedConfigs.some(x=>x.id!==item.id&&x.name.toLocaleLowerCase(language==='en'?'en':'it')===n.toLocaleLowerCase(language==='en'?'en':'it')))return toastMsg(tr('Esiste già una configurazione con questo nome','A configuration with this name already exists'));item.name=n;item.updated=Date.now();persistSavedConfigs();renderConfigList();toastMsg(tr('Configurazione rinominata','Configuration renamed'));return}if(action==='delete'){if(!confirm(`${tr('Eliminare','Delete')} “${item.name}”?`))return;savedConfigs=savedConfigs.filter(x=>x.id!==item.id);persistSavedConfigs();renderConfigList();toastMsg(tr('Configurazione eliminata','Configuration deleted'))}});
+document.getElementById('startupMode').addEventListener('change',e=>{startupMode=e.target.value;savePrefs();clickSound();if(startupMode==='favorite'&&!savedConfigs.some(x=>x.favorite))toastMsg(tr('Scegli una configurazione ⭐ preferita','Choose a ⭐ favorite configuration'));else toastMsg(tr('Avvio aggiornato','Startup updated'))});
 document.getElementById('configName').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('saveCurrentConfig').click()});
 document.getElementById('infoBtn').addEventListener('click',()=>{document.getElementById('infoModal').classList.remove('hidden');clickSound()});
 document.getElementById('closeInfo').addEventListener('click',()=>{document.getElementById('infoModal').classList.add('hidden');clickSound(420)});
