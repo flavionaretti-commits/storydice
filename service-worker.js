@@ -1,11 +1,14 @@
-const CACHE_NAME = 'storydice-v0.6.2';
+const CACHE_NAME = 'storydice-v0.6.4';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './icons/icon-maskable-512.png'
+  './icons/icon-maskable-512.png',
+  './audio/dice-1.mp3',
+  './audio/dice-2-3.mp3',
+  './audio/dice-4plus.mp3'
 ];
 
 self.addEventListener('install', event => {

@@ -1,0 +1,14 @@
+STORYDICE! v0.6.4 — aggiornamento GitHub
+
+Sostituisci nella root della repository:
+- index.html
+- service-worker.js
+
+Crea (se non esiste) la cartella audio e carica al suo interno:
+- dice-1.mp3
+- dice-2-3.mp3
+- dice-4plus.mp3
+
+Non modificare manifest.webmanifest, icons/, LICENSE o LICENSE-CONTENUTI.md.
+
+Il pulsante audio cicla: DIGITALE → REALISTICO MP3 → MUTO → DIGITALE.
