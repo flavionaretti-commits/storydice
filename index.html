@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- STORYDICE! v0.6.5 — bilingue IT/EN + audio ciclico -->
+<!-- STORYDICE! v0.6.5.3 — bilingue IT/EN + bandiera lingua di destinazione + audio ciclico -->
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -131,7 +131,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
     <div class="brand"><h1>STORYDICE<span>!</span></h1><p>Lancia i dadi e inventa una storia</p></div>
     <div class="headerTools">
       <button class="iconBtn" id="projectionBtn" aria-label="Modalità proiezione" title="Proiezione">⛶</button>
-      <button class="iconBtn" id="langBtn" aria-label="Lingua: Italiano" title="Passa all'inglese"><span class="flagBall flag-it" aria-hidden="true"></span></button>
+      <button class="iconBtn" id="langBtn" aria-label="Lingua: Italiano" title="Passa all'inglese"><span class="flagBall flag-uk" aria-hidden="true"></span></button>
       <button class="iconBtn" id="soundBtn" aria-label="Suoni">🔊</button>
       <button class="iconBtn" id="infoBtn" aria-label="Informazioni e istruzioni">ⓘ</button>
     </div>
@@ -864,8 +864,8 @@ function infoMarkup(){
 }
 function applyLanguage(){
   document.documentElement.lang=language;
-  const lb=document.getElementById('langBtn');lb.innerHTML=`<span class="flagBall ${language==='en'?'flag-uk':'flag-it'}" aria-hidden="true"></span>`;lb.title=tr("Passa all'inglese",'Switch to Italian');lb.setAttribute('aria-label',tr('Lingua: Italiano. Passa all\'inglese','Language: English. Switch to Italian'));
-  document.querySelector('.brand p').textContent=tr('Lancia i dadi e inventa una storia','Roll the dice and make up a story');
+  const lb=document.getElementById('langBtn');lb.innerHTML=`<span class="flagBall ${language==='en'?'flag-it':'flag-uk'}" aria-hidden="true"></span>`;lb.title=tr("Passa all'inglese",'Switch to Italian');lb.setAttribute('aria-label',tr('Lingua: Italiano. Passa all\'inglese','Language: English. Switch to Italian'));
+  document.querySelector('.brand p').textContent=tr('Lancia i dadi e inventa una storia','Roll the dice and create a story');
   emptyState.innerHTML=`<strong>${tr('Pronto a raccontare?','Ready to tell a story?')}</strong><span>${tr('Scegli i dadi e premi <b>LANCIA I DADI</b>.','Choose your dice and press <b>ROLL DICE</b>.')}</span>`;
   document.querySelector('[data-mode="mixed"]').innerHTML=`◈ &nbsp; ${tr('MISTA','MIXED')}`;document.querySelector('[data-mode="free"]').innerHTML=`◇ &nbsp; ${tr('LIBERA','FREE')}`;document.querySelector('[data-mode="themed"]').innerHTML=`◉ &nbsp; ${tr('TEMATICA','THEMED')}`;
   document.querySelector('#mixedPane .countRow strong').textContent=tr('Numero di dadi','Number of dice');document.querySelector('#freePane .countRow strong').textContent=tr('Numero di dadi bianchi','Number of white dice');

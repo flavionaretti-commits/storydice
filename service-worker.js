@@ -1,4 +1,4 @@
-const CACHE_NAME = 'storydice-v0.6.5';
+const CACHE_NAME = 'storydice-v0.6.5.3';
 const APP_SHELL = [
   './',
   './index.html',
