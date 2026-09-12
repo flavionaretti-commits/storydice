@@ -2,6 +2,7 @@
   "name": "STORYDICE!",
   "short_name": "STORYDICE!",
   "description": "Lancia i dadi e inventa una storia.",
+  "id": "/storydice/",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
