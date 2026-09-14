@@ -1,14 +1,16 @@
-STORYDICE! v0.6.4 — aggiornamento GitHub
+STORYDICE! v0.6.6 — ESPANSIONE MUSICA
 
-Sostituisci nella root della repository:
+Su GitHub sostituisci soltanto:
 - index.html
 - service-worker.js
 
-Crea (se non esiste) la cartella audio e carica al suo interno:
-- dice-1.mp3
-- dice-2-3.mp3
-- dice-4plus.mp3
+La cartella audio, il manifest, le icone e i file LICENSE non cambiano.
 
-Non modificare manifest.webmanifest, icons/, LICENSE o LICENSE-CONTENUTI.md.
-
-Il pulsante audio cicla: DIGITALE → REALISTICO MP3 → MUTO → DIGITALE.
+Novità:
+- espansione MUSICA / MUSIC
+- 1 dado fisso, bianco, con 6 simboli ritmici neri
+- massimo 1 dado MUSICA in TEMATICA
+- incluso in MISTA/LIBERA quando si attivano le espansioni
+- faccia 5 corretta: due semicrome + croma
+- faccia 6: croma + due semicrome
+- totale catalogo: 222 simboli/facce disponibili

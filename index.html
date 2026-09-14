@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- STORYDICE! v0.6.5.3 — bilingue IT/EN + bandiera lingua di destinazione + audio ciclico -->
+<!-- STORYDICE! v0.6.6 — espansione MUSICA + bilingue IT/EN + audio ciclico -->
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -49,7 +49,7 @@ body{min-height:100svh;overflow-x:hidden}
 .f0{transform:translateZ(calc(var(--die)/2))}.f1{transform:rotateY(180deg) translateZ(calc(var(--die)/2))}.f2{transform:rotateY(90deg) translateZ(calc(var(--die)/2))}.f3{transform:rotateY(-90deg) translateZ(calc(var(--die)/2))}.f4{transform:rotateX(90deg) translateZ(calc(var(--die)/2))}.f5{transform:rotateX(-90deg) translateZ(calc(var(--die)/2))}
 .lockBadge{position:absolute;left:-9px;top:-10px;z-index:8;width:34px;height:34px;border-radius:50%;display:none;place-items:center;background:#183052;color:#ffd260;border:2px solid #f2b631;box-shadow:0 4px 9px rgba(0,0,0,.25);font-size:17px}.locked .lockBadge{display:grid}
 .dieWrap.freeDie .categoryDot{display:none}.dieWrap.freeDie{filter:drop-shadow(0 16px 12px rgba(47,31,16,.22))}.dieWrap.freeDie.locked{filter:drop-shadow(0 0 8px rgba(255,185,30,.9)) drop-shadow(0 16px 12px rgba(47,31,16,.2))}
-.categoryDot{position:absolute;right:-7px;bottom:-7px;width:18px;height:18px;border-radius:50%;background:var(--dieColor);border:3px solid rgba(255,249,238,.95);box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.categoryDot{position:absolute;right:-7px;bottom:-7px;width:18px;height:18px;border-radius:50%;background:var(--dotColor,var(--dieColor));border:3px solid rgba(255,249,238,.95);box-shadow:0 2px 6px rgba(0,0,0,.2)}
 .emptyState{align-self:center;text-align:center;background:rgba(255,250,240,.55);border:1px dashed rgba(67,49,28,.22);border-radius:22px;padding:24px 28px;max-width:420px}.emptyState strong{display:block;font-size:22px}.emptyState span{display:block;margin-top:8px;color:#52657a}
 .panel{width:min(980px,calc(100% - 20px));margin:0 auto max(10px,env(safe-area-inset-bottom));background:var(--panel);border:1px solid rgba(115,79,40,.2);border-radius:28px 28px 22px 22px;box-shadow:0 -4px 20px rgba(72,47,22,.08),var(--shadow);padding:10px}
 .tabs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #d8c7a9;border-radius:18px;overflow:hidden;background:#fff8ea}.tab{border:0;padding:12px;background:transparent;font-weight:1000;font-size:16px;cursor:pointer}.tab.active{background:#133b70;color:white}
@@ -59,7 +59,7 @@ body{min-height:100svh;overflow-x:hidden}
 .categoryGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
 .sectionLabel{display:flex;align-items:center;gap:8px;margin:4px 2px 7px;font-size:11px;font-weight:1000;letter-spacing:.08em;color:#64758a}.sectionLabel:after{content:"";height:1px;flex:1;background:rgba(81,63,42,.16)}.expansionGrid{margin-top:0}.catCard.expansionCard{position:relative;overflow:hidden}.catCard.expansionCard:after{content:"ESP";position:absolute;right:4px;top:3px;font-size:7px;font-weight:1000;letter-spacing:.05em;opacity:.45}
 .catCard{background:#fffaf0;border:1px solid rgba(94,64,31,.13);border-radius:15px;padding:7px 4px 5px;text-align:center;box-shadow:0 3px 7px rgba(66,43,19,.06)}
-.catIcon{width:28px;height:28px;margin:0 auto 2px}.catIcon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.catName{font-size:10px;font-weight:1000;white-space:nowrap}.miniStepper{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:4px}.miniStepper button{border:0;width:24px;height:24px;border-radius:8px;background:#e9eef5;font-size:17px;font-weight:1000;cursor:pointer}.miniStepper b{min-width:16px}
+.catIcon{width:28px;height:28px;margin:0 auto 2px}.catIcon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.musicSvg .filled{fill:currentColor;stroke:none}.face .musicSvg .filled{fill:var(--iconColor,#fff)}.catIcon .musicSvg .filled,.symbolVisual .musicSvg .filled,.slotSymbol .musicSvg .filled{fill:currentColor}.customBtn.fixedMusic{opacity:.74;cursor:default}.catName{font-size:10px;font-weight:1000;white-space:nowrap}.miniStepper{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:4px}.miniStepper button{border:0;width:24px;height:24px;border-radius:8px;background:#e9eef5;font-size:17px;font-weight:1000;cursor:pointer}.miniStepper b{min-width:16px}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.primary{grid-column:1/-1;border:0;border-radius:20px;padding:15px 14px;background:linear-gradient(#194982,#0f315d);color:#fff;font-size:clamp(20px,5vw,28px);font-weight:1000;box-shadow:inset 0 1px rgba(255,255,255,.25),0 5px 0 #0a274c,0 10px 18px rgba(19,59,112,.22);cursor:pointer}.secondary{border:1px solid #ceb892;border-radius:16px;padding:11px 8px;background:#fff8ea;font-weight:1000;cursor:pointer;font-size:clamp(11px,2.7vw,15px);white-space:nowrap}.primary:active,.secondary:active,.iconBtn:active,.stepBtn:active,.miniStepper button:active{transform:translateY(2px)}
 .helper{text-align:center;font-size:11px;color:#68778a;margin:5px 0 0}.hidden{display:none!important}
 .toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(20px);background:#112f58;color:white;padding:10px 15px;border-radius:999px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.22s;z-index:99;font-weight:800}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -263,14 +263,14 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
           <div class="infoMode"><strong>◉ TEMATICA</strong><span>Decidi quanti dadi usare per ciascuna categoria o espansione.</span></div>
         </div>
       </div>
-      <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b>. Ogni categoria contiene 24 simboli e permette fino a 4 dadi da 6 facce.</p></div>
-      <div class="infoSection"><h3>Personalizza i dadi</h3><p>In modalità TEMATICA premi <b>PERSONALIZZA</b> sotto una categoria. Puoi scegliere esattamente le 6 facce di ciascun dado oppure usare <b>CASUALE</b>. I simboli già usati diventano indisponibili sugli altri dadi della stessa categoria.</p></div>
+      <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b>. Le categorie standard e le espansioni da 24 simboli permettono fino a 4 dadi da 6 facce. MUSICA è un dado speciale fisso con 6 facce ritmiche differenti.</p></div>
+      <div class="infoSection"><h3>Personalizza i dadi</h3><p>In modalità TEMATICA premi <b>PERSONALIZZA</b> sotto una categoria. Puoi scegliere esattamente le 6 facce di ciascun dado oppure usare <b>CASUALE</b>. I simboli già usati diventano indisponibili sugli altri dadi della stessa categoria. Il dado MUSICA mantiene invece le sue 6 facce musicali fisse.</p></div>
       <div class="infoSection"><h3>Blocca e rilancia</h3><p>Dopo un lancio, tocca un dado per 🔒 <b>bloccarlo</b>. Premi <b>RILANCIA</b> per tirare di nuovo solo quelli non bloccati. Un altro tocco sblocca il dado.</p></div>
       <div class="infoSection"><h3>Audio</h3><p>Il pulsante audio in alto ha tre stati: <b>🔊 D</b> = lancio digitale, <b>🔊 R</b> = registrazione realistica MP3 sincronizzata al numero di dadi, <b>🔇</b> = audio disattivato. Ogni tocco passa allo stato successivo.</p></div>
-      <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli al set base. In MISTA e LIBERA puoi includerle con la casella dedicata; in TEMATICA puoi usarle e personalizzarle come le categorie base.</p></div>
+      <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli; MUSICA aggiunge un dado bianco fisso con 6 facce ritmiche. In MISTA e LIBERA le espansioni possono entrare nel sorteggio con la casella dedicata; in TEMATICA MUSICA può essere aggiunto una sola volta.</p></div>
       <div class="infoSection"><h3>Salva configurazioni</h3><p>Premi <b>⭐ SALVA</b> per conservare le combinazioni che usi più spesso. Puoi caricarle, rinominarle, eliminarle e indicarne una come ⭐ preferita. L'app può anche riaprire automaticamente l'ultima configurazione usata.</p></div>
       <div class="infoSection"><h3>Proiezione</h3><p><b>PROIEZIONE</b> dà più spazio possibile ai dadi ed è pensata per LIM, monitor e schermi condivisi.</p></div>
-      <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 72 simboli · Totale: 216</small></div>
+      <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 78 simboli · Totale: 222</small></div>
     </div>
   </div>
 </div>
@@ -278,6 +278,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
 <div class="toast" id="toast"></div>
 <script>
 const svg=(body)=>`<svg viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;
+const msvg=(body)=>`<svg class="musicSvg" viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;
 const I={
  key:svg('<circle cx="8" cy="8" r="4"/><path d="M11 11l9 9M15 15l2-2M17.5 17.5l2-2"/>'),
  book:svg('<path d="M3 5.5c3-1 6-.6 9 1.5v12c-3-2.1-6-2.5-9-1.5zM21 5.5c-3-1-6-.6-9 1.5v12c3-2.1 6-2.5 9-1.5z"/>'),
@@ -416,6 +417,16 @@ Object.assign(I,{
   iceberg:svg('<path d="M3 16l5-10 4 5 3-7 6 12zM2 18h20M5 21h14"/>')
 });
 
+
+Object.assign(I,{
+  mus_quarter:msvg('<ellipse class="filled" cx="8" cy="18" rx="3.2" ry="2.5" transform="rotate(-18 8 18)"/><path d="M10.7 17V4"/>'),
+  mus_eighthpair:msvg('<ellipse class="filled" cx="6.5" cy="18" rx="3" ry="2.4" transform="rotate(-18 6.5 18)"/><ellipse class="filled" cx="17" cy="18" rx="3" ry="2.4" transform="rotate(-18 17 18)"/><path d="M9.1 17V6M19.6 17V6"/><path class="filled" d="M8.8 5.3h10.9v2.6H8.8z"/>'),
+  mus_triplet:msvg('<text class="filled" x="12" y="4.8" font-size="4.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">3</text><ellipse class="filled" cx="5.5" cy="18.2" rx="2.7" ry="2.25" transform="rotate(-18 5.5 18.2)"/><ellipse class="filled" cx="12" cy="18.2" rx="2.7" ry="2.25" transform="rotate(-18 12 18.2)"/><ellipse class="filled" cx="18.5" cy="18.2" rx="2.7" ry="2.25" transform="rotate(-18 18.5 18.2)"/><path d="M7.8 17V7M14.3 17V7M20.8 17V7"/><path class="filled" d="M7.5 6.1h13.5v2.5H7.5z"/>'),
+  mus_four16:msvg('<ellipse class="filled" cx="4.2" cy="18.2" rx="2.35" ry="2" transform="rotate(-18 4.2 18.2)"/><ellipse class="filled" cx="9.5" cy="18.2" rx="2.35" ry="2" transform="rotate(-18 9.5 18.2)"/><ellipse class="filled" cx="14.8" cy="18.2" rx="2.35" ry="2" transform="rotate(-18 14.8 18.2)"/><ellipse class="filled" cx="20" cy="18.2" rx="2.35" ry="2" transform="rotate(-18 20 18.2)"/><path d="M6.2 17V5.8M11.5 17V5.8M16.8 17V5.8M22 17V5.8"/><path class="filled" d="M5.9 5h16.2v2.4H5.9zM5.9 8.2h16.2v2.2H5.9z"/>'),
+  mus_16_16_8:msvg('<ellipse class="filled" cx="5" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 5 18.2)"/><ellipse class="filled" cx="12" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 12 18.2)"/><ellipse class="filled" cx="19" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 19 18.2)"/><path d="M7.2 17V5.8M14.2 17V5.8M21.2 17V5.8"/><path class="filled" d="M6.9 5h14.4v2.5H6.9zM6.9 8.4h7.4v2.1H6.9z"/>'),
+  mus_8_16_16:msvg('<ellipse class="filled" cx="5" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 5 18.2)"/><ellipse class="filled" cx="12" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 12 18.2)"/><ellipse class="filled" cx="19" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 19 18.2)"/><path d="M7.2 17V5.8M14.2 17V5.8M21.2 17V5.8"/><path class="filled" d="M6.9 5h14.4v2.5H6.9zM14 8.4h7.3v2.1H14z"/>')
+});
+
 const EMOJI={
   obj_balloon:'🎈', obj_graduation:'🎓', obj_ring:'💍', obj_sunglasses:'🕶️', obj_umbrella:'🌂', obj_toast:'🥂',
   obj_telescope:'🔭', obj_scissors:'✂️', obj_football:'⚽️', obj_trophy:'🏆', obj_bin:'🗑️', obj_microphone:'🎤',
@@ -471,7 +482,8 @@ const L={
   nat_cactus:'Cactus',nat_pine:'Conifera',nat_palm:'Palma',nat_plant:'Pianta',nat_leaf:'Foglia',nat_nest:'Nido',nat_mushroom:'Fungo',nat_rose:'Rosa',nat_sun:'Sole',nat_moon:'Luna',nat_wave:'Mare',nat_snow:'Neve',nat_storm:'Temporale',nat_tornado:'Tornado',nat_rainbow:'Arcobaleno',nat_fire:'Fuoco',nat_comet:'Stella cadente',nat_tracks:'Tracce',nat_apple:'Mela',nat_banana:'Banana',nat_lemon:'Limone',nat_bread:'Pane',nat_bone:'Osso',nat_microbe:'Microbo',
   spo_basket:'Basket',spo_football:'Football americano',spo_tennis:'Tennis',spo_climb:'Arrampicata',spo_gym:'Ginnastica',spo_boxing:'Boxe',spo_diving:'Immersione',spo_archery:"Tiro con l’arco",spo_pingpong:'Ping-pong',spo_billiards:'Biliardo',spo_hockey:'Hockey',spo_martial:'Arti marziali',spo_skating:'Pattinaggio',spo_rollers:'Pattini',spo_parachute:'Paracadutismo',spo_ski:'Sci',spo_weights:'Sollevamento pesi',spo_fencing:'Scherma',spo_golf:'Golf',spo_horse:'Equitazione',spo_surf:'Surf',spo_yoga:'Yoga',spo_swim:'Nuoto',spo_cycle:'Ciclismo',
   food_pear:'Pera',food_orange:'Arancia',food_watermelon:'Anguria',food_grapes:'Uva',food_strawberry:'Fragola',food_blueberries:'Mirtilli',food_pineapple:'Ananas',food_cherries:'Ciliegie',food_coconut:'Cocco',food_tomato:'Pomodoro',food_eggplant:'Melanzana',food_chili:'Peperoncino',food_corn:'Mais',food_carrot:'Carota',food_onion:'Cipolla',food_potato:'Patata',food_pretzel:'Pretzel',food_cheese:'Formaggio',food_egg:'Uovo',food_steak:'Bistecca',food_chicken:'Pollo',food_burger:'Hamburger',food_fries:'Patatine',food_pizza:'Pizza',
-  fan_ghost:'Fantasma',fan_pumpkin:'Zucca',fan_alien:'Alieno',fan_invader:'Mostro alieno',fan_robot:'Robot',fan_magewoman:'Maga',fan_superhero:'Supereroe',fan_santa:'Babbo Natale',fan_vampire:'Vampiro',fan_wizard:'Mago',fan_zombie:'Zombie',fan_genie:'Genio',fan_mermaid:'Sirena',fan_fairy:'Fata',fan_unicorn:'Unicorno',fan_dragonface:'Testa di drago',fan_phoenix:'Fenice',fan_snowman:'Pupazzo di neve',fan_crystal:'Sfera di cristallo',fan_wand:'Bacchetta magica',fan_biohazard:'Pericolo biologico',fan_dragon:'Drago',fan_testtube:'Provetta',fan_alembic:'Alambicco'
+  fan_ghost:'Fantasma',fan_pumpkin:'Zucca',fan_alien:'Alieno',fan_invader:'Mostro alieno',fan_robot:'Robot',fan_magewoman:'Maga',fan_superhero:'Supereroe',fan_santa:'Babbo Natale',fan_vampire:'Vampiro',fan_wizard:'Mago',fan_zombie:'Zombie',fan_genie:'Genio',fan_mermaid:'Sirena',fan_fairy:'Fata',fan_unicorn:'Unicorno',fan_dragonface:'Testa di drago',fan_phoenix:'Fenice',fan_snowman:'Pupazzo di neve',fan_crystal:'Sfera di cristallo',fan_wand:'Bacchetta magica',fan_biohazard:'Pericolo biologico',fan_dragon:'Drago',fan_testtube:'Provetta',fan_alembic:'Alambicco',
+  mus_quarter:'Semiminima',mus_eighthpair:'Due crome',mus_triplet:'Terzina di crome',mus_four16:'Quattro semicrome',mus_16_16_8:'Due semicrome + croma',mus_8_16_16:'Croma + due semicrome'
 };
 const L_EN={
   obj_balloon:"Balloon",
@@ -689,11 +701,17 @@ const L_EN={
   fan_biohazard:"Biohazard",
   fan_dragon:"Dragon",
   fan_testtube:"Test tube",
-  fan_alembic:"Alembic"
+  fan_alembic:"Alembic",
+  mus_quarter:"Quarter note",
+  mus_eighthpair:"Two eighth notes",
+  mus_triplet:"Eighth-note triplet",
+  mus_four16:"Four sixteenth notes",
+  mus_16_16_8:"Two sixteenth notes + eighth",
+  mus_8_16_16:"Eighth + two sixteenth notes"
 };
 let language='it';
 function symbolLabel(id){return language==='en'?(L_EN[id]||L[id]||id):(L[id]||id)}
-function catLabel(k){const en={objects:'OBJECTS',places:'PLACES',emotions:'EMOTIONS',animals:'ANIMALS',concepts:'CONCEPTS',nature:'NATURE',sport:'SPORT',food:'FOOD',fantasy:'FANTASY'};return language==='en'?(en[k]||allCategories?.[k]?.label||k):(allCategories?.[k]?.label||k)}
+function catLabel(k){const en={objects:'OBJECTS',places:'PLACES',emotions:'EMOTIONS',animals:'ANIMALS',concepts:'CONCEPTS',nature:'NATURE',sport:'SPORT',food:'FOOD',fantasy:'FANTASY',music:'MUSIC'};return language==='en'?(en[k]||allCategories?.[k]?.label||k):(allCategories?.[k]?.label||k)}
 function tr(it,en){return language==='en'?en:it}
 function symbolMarkup(id){return EMOJI[id]?`<span class="emojiFace" role="img" aria-label="${symbolLabel(id)}">${EMOJI[id]}</span>`:(I[id]||svg('<circle cx="12" cy="12" r="8"/>'));}
 
@@ -708,7 +726,8 @@ const categories={
 const expansions={
  sport:{label:'SPORT',hex:'#2686c9',isExpansion:true,icons:['spo_basket','spo_football','spo_tennis','spo_climb','spo_gym','spo_boxing','spo_diving','spo_archery','spo_pingpong','spo_billiards','spo_hockey','spo_martial','spo_skating','spo_rollers','spo_parachute','spo_ski','spo_weights','spo_fencing','spo_golf','spo_horse','spo_surf','spo_yoga','spo_swim','spo_cycle']},
  food:{label:'CIBO',hex:'#e66b2e',isExpansion:true,icons:['food_pear','food_orange','food_watermelon','food_grapes','food_strawberry','food_blueberries','food_pineapple','food_cherries','food_coconut','food_tomato','food_eggplant','food_chili','food_corn','food_carrot','food_onion','food_potato','food_pretzel','food_cheese','food_egg','food_steak','food_chicken','food_burger','food_fries','food_pizza']},
- fantasy:{label:'FANTASY',hex:'#9b4dcc',isExpansion:true,icons:['fan_ghost','fan_pumpkin','fan_alien','fan_invader','fan_robot','fan_magewoman','fan_superhero','fan_santa','fan_vampire','fan_wizard','fan_zombie','fan_genie','fan_mermaid','fan_fairy','fan_unicorn','fan_dragonface','fan_phoenix','fan_snowman','fan_crystal','fan_wand','fan_biohazard','fan_dragon','fan_testtube','fan_alembic']}
+ fantasy:{label:'FANTASY',hex:'#9b4dcc',isExpansion:true,icons:['fan_ghost','fan_pumpkin','fan_alien','fan_invader','fan_robot','fan_magewoman','fan_superhero','fan_santa','fan_vampire','fan_wizard','fan_zombie','fan_genie','fan_mermaid','fan_fairy','fan_unicorn','fan_dragonface','fan_phoenix','fan_snowman','fan_crystal','fan_wand','fan_biohazard','fan_dragon','fan_testtube','fan_alembic']},
+ music:{label:'MUSICA',hex:'#26344a',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:1,fixed:true,icons:['mus_quarter','mus_eighthpair','mus_triplet','mus_four16','mus_16_16_8','mus_8_16_16']}
 };
 const catKeys=Object.keys(categories), expansionKeys=Object.keys(expansions), allKeys=[...catKeys,...expansionKeys];
 const allCategories={...categories,...expansions};
@@ -728,7 +747,7 @@ function safeSet(key,value){try{localStorage.setItem(key,JSON.stringify(value));
 function clone(v){return JSON.parse(JSON.stringify(v))}
 function standardConfig(){return {mode:'free',mixedCount:6,freeCount:6,includeExpansions:false,mixedIncludeExpansions:false,counts:Object.fromEntries(allKeys.map(k=>[k,catKeys.includes(k)?1:0])),customFaces:Object.fromEntries(allKeys.map(k=>[k,[]])),customEnabled:Object.fromEntries(allKeys.map(k=>[k,false]))}}
 function captureConfig(){return {mode,mixedCount,freeCount,includeExpansions,mixedIncludeExpansions,counts:clone(counts),customFaces:clone(customFaces),customEnabled:clone(customEnabled)}}
-function sanitizeConfig(raw){let base=standardConfig(),r=raw&&typeof raw==='object'?raw:{};base.mode=['mixed','free','themed'].includes(r.mode)?r.mode:base.mode;base.mixedCount=Math.max(1,Math.min(12,+r.mixedCount||6));base.freeCount=Math.max(1,Math.min(12,+r.freeCount||6));base.includeExpansions=!!r.includeExpansions;base.mixedIncludeExpansions=!!r.mixedIncludeExpansions;allKeys.forEach(k=>{base.counts[k]=Math.max(0,Math.min(4,+((r.counts||{})[k])||0));let faces=((r.customFaces||{})[k]);if(Array.isArray(faces)){let valid=faces.slice(0,4).map(a=>Array.isArray(a)?a.filter(x=>allCategories[k].icons.includes(x)).slice(0,6):[]);let flat=valid.flat();if(new Set(flat).size===flat.length)base.customFaces[k]=valid}let en=!!((r.customEnabled||{})[k]);let n=base.counts[k],cf=base.customFaces[k];base.customEnabled[k]=en&&n>0&&cf.length>=n&&cf.slice(0,n).every(a=>a.length===6)&&new Set(cf.slice(0,n).flat()).size===n*6});return base}
+function sanitizeConfig(raw){let base=standardConfig(),r=raw&&typeof raw==='object'?raw:{};base.mode=['mixed','free','themed'].includes(r.mode)?r.mode:base.mode;base.mixedCount=Math.max(1,Math.min(12,+r.mixedCount||6));base.freeCount=Math.max(1,Math.min(12,+r.freeCount||6));base.includeExpansions=!!r.includeExpansions;base.mixedIncludeExpansions=!!r.mixedIncludeExpansions;allKeys.forEach(k=>{base.counts[k]=Math.max(0,Math.min(allCategories[k].maxDice||4,+((r.counts||{})[k])||0));let faces=((r.customFaces||{})[k]);if(Array.isArray(faces)){let valid=faces.slice(0,4).map(a=>Array.isArray(a)?a.filter(x=>allCategories[k].icons.includes(x)).slice(0,6):[]);let flat=valid.flat();if(new Set(flat).size===flat.length)base.customFaces[k]=valid}let en=!!((r.customEnabled||{})[k]);let n=base.counts[k],cf=base.customFaces[k];base.customEnabled[k]=en&&n>0&&cf.length>=n&&cf.slice(0,n).every(a=>a.length===6)&&new Set(cf.slice(0,n).flat()).size===n*6});return base}
 function syncConfigUI(){
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.mode===mode));
   document.getElementById('mixedPane').classList.toggle('hidden',mode!=='mixed');document.getElementById('freePane').classList.toggle('hidden',mode!=='free');document.getElementById('themedPane').classList.toggle('hidden',mode!=='themed');
@@ -790,23 +809,26 @@ function makeDie(kind,cat,icons){return {id:uuid(),kind,cat,icons:[...icons],fac
 function buildCategoryUI(){
   const baseGrid=document.getElementById('categoryGrid'),expGrid=document.getElementById('expansionGrid');baseGrid.innerHTML='';expGrid.innerHTML='';
   allKeys.forEach(k=>{let c=allCategories[k];let el=document.createElement('div');el.className='catCard'+(c.isExpansion?' expansionCard':'');el.style.color=c.hex;
-    el.innerHTML=`<div class="catIcon">${symbolMarkup(c.icons[0])}</div><div class="catName">${catLabel(k)}</div><div class="miniStepper"><button data-cat="${k}" data-delta="-1">−</button><b id="count-${k}">${counts[k]}</b><button data-cat="${k}" data-delta="1">+</button></div><div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}</button></div><div class="catStatus" id="status-${k}">${customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates')}</div>`;
+    let tool=c.fixed?`<div class="catTools"><button class="customBtn fixedMusic" disabled>${tr('♫ DADO FISSO','♫ FIXED DIE')}</button></div>`:`<div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}</button></div>`;
+    let status=c.fixed?tr('6 facce musicali fisse','6 fixed musical faces'):(customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates'));
+    el.innerHTML=`<div class="catIcon">${symbolMarkup(c.icons[0])}</div><div class="catName">${catLabel(k)}</div><div class="miniStepper"><button data-cat="${k}" data-delta="-1">−</button><b id="count-${k}">${counts[k]}</b><button data-cat="${k}" data-delta="1">+</button></div>${tool}<div class="catStatus" id="status-${k}">${status}</div>`;
     (c.isExpansion?expGrid:baseGrid).appendChild(el)
   });
 }
 function refreshCategoryCard(k){
   const n=document.getElementById('count-'+k);if(n)n.textContent=counts[k];
+  const c=allCategories[k];
   const b=document.querySelector(`[data-custom="${k}"]`);if(b){b.classList.toggle('customized',customEnabled[k]);b.textContent=customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}
-  const s=document.getElementById('status-'+k);if(s)s.textContent=customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates');
+  const s=document.getElementById('status-'+k);if(s)s.textContent=c.fixed?tr('6 facce musicali fisse','6 fixed musical faces'):(customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates'));
 }
 document.getElementById('themedPane').addEventListener('click',e=>{
-  const step=e.target.closest('button[data-cat]');if(step){let k=step.dataset.cat,d=+step.dataset.delta,old=counts[k],next=Math.max(0,Math.min(4,old+d));if(next===old)return;if(next>old&&customEnabled[k]){customEnabled[k]=false;toastMsg(`${catLabel(k)}: ${tr('aumento dadi → modalità AUTO','more dice → AUTO mode')}`)}counts[k]=next;refreshCategoryCard(k);persistLastConfig();clickSound();return}
+  const step=e.target.closest('button[data-cat]');if(step){let k=step.dataset.cat,d=+step.dataset.delta,old=counts[k],next=Math.max(0,Math.min(allCategories[k].maxDice||4,old+d));if(next===old)return;if(next>old&&customEnabled[k]){customEnabled[k]=false;toastMsg(`${catLabel(k)}: ${tr('aumento dadi → modalità AUTO','more dice → AUTO mode')}`)}counts[k]=next;refreshCategoryCard(k);persistLastConfig();clickSound();return}
   const custom=e.target.closest('button[data-custom]');if(custom){openCustomizer(custom.dataset.custom)}
 });
 
-function allocateAutoCategory(cat,n){let selected=shuffle(allCategories[cat].icons).slice(0,n*6);return chunks(selected,6).map(f=>makeDie('category',cat,f))}
+function allocateAutoCategory(cat,n){let c=allCategories[cat];if(c.fixed)return n?[makeDie('category',cat,c.icons)]:[];let selected=shuffle(c.icons).slice(0,n*6);return chunks(selected,6).map(f=>makeDie('category',cat,f))}
 function allocateThemedCategory(cat,n){if(!n)return[];if(customEnabled[cat]){let saved=(customFaces[cat]||[]).slice(0,n);if(saved.length===n&&saved.every(a=>a.length===6)&&new Set(saved.flat()).size===n*6)return saved.map(f=>makeDie('category',cat,f));customEnabled[cat]=false;refreshCategoryCard(cat)}return allocateAutoCategory(cat,n)}
-function freshMixedDice(){let keys=mixedIncludeExpansions?allKeys:catKeys,bag=keys.flatMap(k=>Array(4).fill(k));let cats=shuffle(bag).slice(0,mixedCount),pools=Object.fromEntries(keys.map(k=>[k,shuffle(allCategories[k].icons)])),cursor=Object.fromEntries(keys.map(k=>[k,0]));return cats.map(cat=>{let i=cursor[cat];cursor[cat]+=6;return makeDie('category',cat,pools[cat].slice(i,i+6))})}
+function freshMixedDice(){let keys=mixedIncludeExpansions?allKeys:catKeys,bag=keys.flatMap(k=>Array(allCategories[k].maxDice||4).fill(k));let cats=shuffle(bag).slice(0,mixedCount),pools=Object.fromEntries(keys.map(k=>[k,allCategories[k].fixed?[...allCategories[k].icons]:shuffle(allCategories[k].icons)])),cursor=Object.fromEntries(keys.map(k=>[k,0]));return cats.map(cat=>{let c=allCategories[cat];if(c.fixed)return makeDie('category',cat,c.icons);let i=cursor[cat];cursor[cat]+=6;return makeDie('category',cat,pools[cat].slice(i,i+6))})}
 function freshFreeDice(){let pool=shuffle([...new Set(freeSymbolPool())]),need=freeCount*6;if(pool.length<need){toastMsg(tr('Non ci sono abbastanza simboli unici','Not enough unique symbols'));return[]}return chunks(pool.slice(0,need),6).map(f=>makeDie('free',null,f))}
 function freshThemedDice(){let out=[];allKeys.forEach(k=>out.push(...allocateThemedCategory(k,counts[k])));return out}
 function buildFreshDice(){return mode==='mixed'?freshMixedDice():mode==='free'?freshFreeDice():freshThemedDice()}
@@ -815,7 +837,7 @@ function orientation(face){switch(face){case 0:return [0,0];case 1:return [0,180
 function dieSize(n){let landscape=innerWidth>innerHeight&&innerHeight<=700;if(landscape)return n<=6?86:n<=12?68:n<=18?56:48;if(innerWidth<430)return n<=4?92:n<=6?80:n<=9?68:n<=12?58:n<=18?49:43;if(innerWidth<760)return n<=6?104:n<=9?88:n<=12?76:n<=18?64:54;return n<=6?126:n<=9?108:n<=12?92:n<=18?76:66}
 function renderDice(animate=true,rollCount=dice.length){
   emptyState.classList.toggle('hidden',dice.length>0);[...diceField.querySelectorAll('.dieWrap')].forEach(n=>n.remove());let size=dieSize(dice.length||6);
-  dice.forEach((d,idx)=>{let isFree=d.kind==='free';let c=isFree?{label:'LIBERA',hex:'#f8f7f2'}:allCategories[d.cat],w=document.createElement('div');w.className='dieWrap'+(isFree?' freeDie':'')+(d.locked?' locked':'');w.style.setProperty('--die',size+'px');w.style.setProperty('--dieColor',c.hex);w.style.setProperty('--iconColor',isFree?'#17345c':'#fff');w.style.setProperty('--tilt',((idx%2?1:-1)*(2+idx%4))+'deg');w.dataset.id=d.id;
+  dice.forEach((d,idx)=>{let isFree=d.kind==='free';let c=isFree?{label:'LIBERA',hex:'#f8f7f2'}:allCategories[d.cat],w=document.createElement('div');w.className='dieWrap'+(isFree?' freeDie':'')+(d.locked?' locked':'');w.style.setProperty('--die',size+'px');w.style.setProperty('--dieColor',isFree?'#f8f7f2':(c.dieHex||c.hex));w.style.setProperty('--iconColor',isFree?'#17345c':(c.iconColor||'#fff'));w.style.setProperty('--dotColor',isFree?'#f8f7f2':c.hex);w.style.setProperty('--tilt',((idx%2?1:-1)*(2+idx%4))+'deg');w.dataset.id=d.id;
     let faces=d.icons.map((ic,i)=>`<div class="face f${i}">${symbolMarkup(ic)}</div>`).join('');w.innerHTML=`<div class="lockBadge">🔒</div><div class="die">${faces}</div><div class="categoryDot" title="${catLabel(d.cat)}"></div>`;diceField.appendChild(w);
     let dieEl=w.querySelector('.die'),[fx,fy]=orientation(d.face);if(animate&&!d.locked){let extraX=360*(2+Math.floor(Math.random()*2)),extraY=360*(2+Math.floor(Math.random()*3));let base=rollDuration(Math.max(1,rollCount));let dur=rollCount<=1?base:base*(.92+Math.random()*.08);dieEl.style.transition='none';dieEl.style.transform=`rotateX(${fx-extraX}deg) rotateY(${fy+extraY}deg) rotateZ(${Math.random()*120-60}deg)`;requestAnimationFrame(()=>requestAnimationFrame(()=>{dieEl.style.transition=`transform ${dur.toFixed(3)}s cubic-bezier(.16,.72,.2,1.08)`;dieEl.style.transform=`rotateX(${fx}deg) rotateY(${fy}deg) rotateZ(0deg)`}))}else dieEl.style.transform=`rotateX(${fx}deg) rotateY(${fy}deg) rotateZ(0deg)`;
   });
@@ -843,24 +865,24 @@ document.getElementById('closeCustom').addEventListener('click',closeCustomizer)
 function infoMarkup(){
   if(language==='en')return `<div class="infoHero"><div class="bigDie">🎲</div><div><strong>Roll. Look. Imagine.</strong><span>Use the symbols you get to invent a story, a sentence, a dialogue or a creative challenge.</span></div></div>
   <div class="infoSection"><h3>Three ways to play</h3><div class="infoModes"><div class="infoMode"><strong>◈ MIXED</strong><span>Randomly chooses dice from the categories. Each die keeps its category color.</span></div><div class="infoMode"><strong>◇ FREE</strong><span>Creates white dice: every face is drawn freely from all available categories.</span></div><div class="infoMode"><strong>◉ THEMED</strong><span>Choose how many dice to use for each category or expansion.</span></div></div></div>
-  <div class="infoSection"><h3>No duplicates</h3><p>Each symbol can appear <b>only once in the same roll</b>. Every category contains 24 symbols and supports up to four six-faced dice.</p></div>
-  <div class="infoSection"><h3>Customize the dice</h3><p>In THEMED mode press <b>CUSTOMIZE</b> under a category. You can choose the exact 6 faces of each die or use <b>RANDOM</b>. Symbols already used become unavailable on the other dice in the same category.</p></div>
+  <div class="infoSection"><h3>No duplicates</h3><p>Each symbol can appear <b>only once in the same roll</b>. The standard categories and 24-symbol expansions support up to four six-faced dice. MUSIC is a special fixed die with six different rhythm faces.</p></div>
+  <div class="infoSection"><h3>Customize the dice</h3><p>In THEMED mode press <b>CUSTOMIZE</b> under a category. You can choose the exact 6 faces of each die or use <b>RANDOM</b>. Symbols already used become unavailable on the other dice in the same category. The MUSIC die keeps its six fixed musical faces.</p></div>
   <div class="infoSection"><h3>Lock and reroll</h3><p>After a roll, tap a die to 🔒 <b>lock it</b>. Press <b>REROLL</b> to roll only the unlocked dice. Tap a locked die again to unlock it.</p></div>
   <div class="infoSection"><h3>Audio</h3><p>The audio button has three states: <b>🔊 D</b> = digital roll, <b>🔊 R</b> = realistic MP3 recording matched to the number of dice, <b>🔇</b> = audio off. Each tap moves to the next state.</p></div>
-  <div class="infoSection"><h3>Expansions</h3><p>SPORT, FOOD and FANTASY add 72 symbols to the base set. In MIXED and FREE modes you can include them with the dedicated checkbox; in THEMED mode you can use and customize them just like the base categories.</p></div>
+  <div class="infoSection"><h3>Expansions</h3><p>SPORT, FOOD and FANTASY add 72 symbols, while MUSIC adds one fixed white die with 6 rhythm faces. In MIXED and FREE modes expansions can join the draw with the dedicated checkbox; in THEMED mode MUSIC can be added once.</p></div>
   <div class="infoSection"><h3>Save configurations</h3><p>Press <b>⭐ SAVE</b> to keep the combinations you use most often. You can load, rename and delete them, and mark one as your ⭐ favorite. The app can also reopen the last configuration automatically.</p></div>
   <div class="infoSection"><h3>Projection</h3><p><b>PROJECTION</b> gives the dice as much screen space as possible and is designed for interactive whiteboards, monitors and shared screens.</p></div>
-  <div class="creditsBox"><strong>STORYDICE!</strong><span>Created by Flavio Naretti</span><small>Base set: 144 symbols · Expansions: 72 symbols · Total: 216</small></div>`;
+  <div class="creditsBox"><strong>STORYDICE!</strong><span>Created by Flavio Naretti</span><small>Base set: 144 symbols · Expansions: 78 symbols · Total: 222</small></div>`;
   return `<div class="infoHero"><div class="bigDie">🎲</div><div><strong>Lancia. Osserva. Immagina.</strong><span>Usa i simboli ottenuti per inventare una storia, una frase, un dialogo o una sfida creativa.</span></div></div>
   <div class="infoSection"><h3>Tre modi di giocare</h3><div class="infoModes"><div class="infoMode"><strong>◈ MISTA</strong><span>Sceglie dadi casualmente tra le categorie. Ogni dado mantiene il proprio colore.</span></div><div class="infoMode"><strong>◇ LIBERA</strong><span>Crea dadi bianchi: ogni faccia pesca liberamente da tutte le categorie disponibili.</span></div><div class="infoMode"><strong>◉ TEMATICA</strong><span>Decidi quanti dadi usare per ciascuna categoria o espansione.</span></div></div></div>
-  <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b>. Ogni categoria contiene 24 simboli e permette fino a 4 dadi da 6 facce.</p></div>
-  <div class="infoSection"><h3>Personalizza i dadi</h3><p>In modalità TEMATICA premi <b>PERSONALIZZA</b> sotto una categoria. Puoi scegliere esattamente le 6 facce di ciascun dado oppure usare <b>CASUALE</b>. I simboli già usati diventano indisponibili sugli altri dadi della stessa categoria.</p></div>
+  <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b>. Le categorie standard e le espansioni da 24 simboli permettono fino a 4 dadi da 6 facce. MUSICA è un dado speciale fisso con 6 facce ritmiche differenti.</p></div>
+  <div class="infoSection"><h3>Personalizza i dadi</h3><p>In modalità TEMATICA premi <b>PERSONALIZZA</b> sotto una categoria. Puoi scegliere esattamente le 6 facce di ciascun dado oppure usare <b>CASUALE</b>. I simboli già usati diventano indisponibili sugli altri dadi della stessa categoria. Il dado MUSICA mantiene invece le sue 6 facce musicali fisse.</p></div>
   <div class="infoSection"><h3>Blocca e rilancia</h3><p>Dopo un lancio, tocca un dado per 🔒 <b>bloccarlo</b>. Premi <b>RILANCIA</b> per tirare di nuovo solo quelli non bloccati. Un altro tocco sblocca il dado.</p></div>
   <div class="infoSection"><h3>Audio</h3><p>Il pulsante audio in alto ha tre stati: <b>🔊 D</b> = lancio digitale, <b>🔊 R</b> = registrazione realistica MP3 sincronizzata al numero di dadi, <b>🔇</b> = audio disattivato. Ogni tocco passa allo stato successivo.</p></div>
-  <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli al set base. In MISTA e LIBERA puoi includerle con la casella dedicata; in TEMATICA puoi usarle e personalizzarle come le categorie base.</p></div>
+  <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli; MUSICA aggiunge un dado bianco fisso con 6 facce ritmiche. In MISTA e LIBERA le espansioni possono entrare nel sorteggio con la casella dedicata; in TEMATICA MUSICA può essere aggiunto una sola volta.</p></div>
   <div class="infoSection"><h3>Salva configurazioni</h3><p>Premi <b>⭐ SALVA</b> per conservare le combinazioni che usi più spesso. Puoi caricarle, rinominarle, eliminarle e indicarne una come ⭐ preferita. L'app può anche riaprire automaticamente l'ultima configurazione usata.</p></div>
   <div class="infoSection"><h3>Proiezione</h3><p><b>PROIEZIONE</b> dà più spazio possibile ai dadi ed è pensata per LIM, monitor e schermi condivisi.</p></div>
-  <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 72 simboli · Totale: 216</small></div>`;
+  <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 78 simboli · Totale: 222</small></div>`;
 }
 function applyLanguage(){
   document.documentElement.lang=language;
@@ -910,12 +932,6 @@ document.getElementById('infoModal').addEventListener('click',e=>{if(e.target.id
 window.addEventListener('keydown',e=>{if(e.key!=='Escape')return;for(const id of ['customModal','configModal','infoModal']){let m=document.getElementById(id);if(m&&!m.classList.contains('hidden')){m.classList.add('hidden');break}}});
 window.addEventListener('resize',()=>{if(dice.length)renderDice(false)});
 restoreInitialState();
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js').catch(() => {});
-  });
-}
 
 </script>
 
