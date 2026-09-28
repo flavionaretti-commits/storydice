@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- STORYDICE! v0.6.9 — puntini grandi + icone MUSICA/DADI + Giorno/Notte + bilingue IT/EN + audio ciclico -->
+<!-- STORYDICE! v0.6.10 — icone MUSICA/DADI ad alto contrasto + puntini grandi + Giorno/Notte + bilingue IT/EN + audio ciclico -->
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -59,7 +59,7 @@ body{min-height:100svh;overflow-x:hidden}
 .categoryGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
 .sectionLabel{display:flex;align-items:center;gap:8px;margin:4px 2px 7px;font-size:11px;font-weight:1000;letter-spacing:.08em;color:#64758a}.sectionLabel:after{content:"";height:1px;flex:1;background:rgba(81,63,42,.16)}.expansionGrid{margin-top:0}.catCard.expansionCard{position:relative;overflow:hidden}.catCard.expansionCard:after{content:"ESP";position:absolute;right:4px;top:3px;font-size:7px;font-weight:1000;letter-spacing:.05em;opacity:.45}
 .catCard{background:#fffaf0;border:1px solid rgba(94,64,31,.13);border-radius:15px;padding:7px 4px 5px;text-align:center;box-shadow:0 3px 7px rgba(66,43,19,.06)}
-.catIcon{width:28px;height:28px;margin:0 auto 2px}.catIcon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.musicSvg .filled{fill:currentColor;stroke:none}.face .musicSvg .filled{fill:var(--iconColor,#fff)}.face .pipSvg{width:76%;height:76%}.face .pipSvg .filled{fill:var(--iconColor,#111827)}.catIcon .musicSvg .filled,.symbolVisual .musicSvg .filled,.slotSymbol .musicSvg .filled{fill:currentColor}.catIcon.categoryFixedIcon svg{width:32px;height:32px;stroke-width:2}.catIcon.categoryFixedIcon .filled{fill:currentColor;stroke:none}.customBtn.fixedMusic{opacity:.74;cursor:default}.catName{font-size:10px;font-weight:1000;white-space:nowrap}.miniStepper{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:4px}.miniStepper button{border:0;width:24px;height:24px;border-radius:8px;background:#e9eef5;font-size:17px;font-weight:1000;cursor:pointer}.miniStepper b{min-width:16px}
+.catIcon{width:28px;height:28px;margin:0 auto 2px}.catIcon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.musicSvg .filled{fill:currentColor;stroke:none}.face .musicSvg .filled{fill:var(--iconColor,#fff)}.face .pipSvg{width:76%;height:76%}.face .pipSvg .filled{fill:var(--iconColor,#111827)}.catIcon .musicSvg .filled,.symbolVisual .musicSvg .filled,.slotSymbol .musicSvg .filled{fill:currentColor}.catIcon.categoryFixedIcon{width:34px;height:34px;margin-bottom:0}.catIcon.categoryFixedIcon svg{width:34px;height:34px;stroke-width:2.25}.catIcon.categoryFixedIcon .filled{fill:currentColor;stroke:none}.catCard[data-category="music"] .catIcon,.catCard[data-category="dice"] .catIcon{color:#111827}.dark .catCard[data-category="music"],.dark .catCard[data-category="dice"]{color:#f5f8fc!important}.dark .catCard[data-category="music"] .catIcon,.dark .catCard[data-category="dice"] .catIcon{color:#fff!important;filter:drop-shadow(0 1px 2px rgba(0,0,0,.45))}.customBtn.fixedMusic{opacity:.9;cursor:default}.catName{font-size:10px;font-weight:1000;white-space:nowrap}.miniStepper{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:4px}.miniStepper button{border:0;width:24px;height:24px;border-radius:8px;background:#e9eef5;font-size:17px;font-weight:1000;cursor:pointer}.miniStepper b{min-width:16px}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.primary{grid-column:1/-1;border:0;border-radius:20px;padding:15px 14px;background:linear-gradient(#194982,#0f315d);color:#fff;font-size:clamp(20px,5vw,28px);font-weight:1000;box-shadow:inset 0 1px rgba(255,255,255,.25),0 5px 0 #0a274c,0 10px 18px rgba(19,59,112,.22);cursor:pointer}.secondary{border:1px solid #ceb892;border-radius:16px;padding:11px 8px;background:#fff8ea;font-weight:1000;cursor:pointer;font-size:clamp(11px,2.7vw,15px);white-space:nowrap}.primary:active,.secondary:active,.iconBtn:active,.stepBtn:active,.miniStepper button:active{transform:translateY(2px)}
 .helper{text-align:center;font-size:11px;color:#68778a;margin:5px 0 0}.hidden{display:none!important}
 .toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(20px);background:#112f58;color:white;padding:10px 15px;border-radius:999px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.22s;z-index:99;font-weight:800}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -250,7 +250,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
 <div class="modalOverlay hidden" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
   <div class="customModal infoModal">
     <div class="customHeader">
-      <div><small>STORYDICE! · v0.6.9</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
+      <div><small>STORYDICE! · v0.6.10</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
       <button class="closeModal" id="closeInfo" aria-label="Chiudi">×</button>
     </div>
     <div class="infoBody">
@@ -824,7 +824,7 @@ function makeDie(kind,cat,icons){return {id:uuid(),kind,cat,icons:[...icons],fac
 
 function buildCategoryUI(){
   const baseGrid=document.getElementById('categoryGrid'),expGrid=document.getElementById('expansionGrid');baseGrid.innerHTML='';expGrid.innerHTML='';
-  allKeys.forEach(k=>{let c=allCategories[k];let el=document.createElement('div');el.className='catCard'+(c.isExpansion?' expansionCard':'');el.style.color=c.hex;
+  allKeys.forEach(k=>{let c=allCategories[k];let el=document.createElement('div');el.className='catCard'+(c.isExpansion?' expansionCard':'');el.dataset.category=k;el.style.color=c.hex;
     let fixedLabel=k==='music'?tr('♫ DADI FISSI','♫ FIXED DICE'):tr('⚄ DADI FISSI','⚄ FIXED DICE');
     let tool=c.fixed?`<div class="catTools"><button class="customBtn fixedMusic" disabled>${fixedLabel}</button></div>`:`<div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}</button></div>`;
     let status=c.fixed?tr('1–4 dadi identici · 6 facce fisse','1–4 identical dice · 6 fixed faces'):(customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates'));
