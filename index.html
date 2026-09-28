@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- STORYDICE! v0.6.8 — DADI classici + MUSICA fino a 4 dadi identici + Giorno/Notte + bilingue IT/EN + audio ciclico -->
+<!-- STORYDICE! v0.6.9 — puntini grandi + icone MUSICA/DADI + Giorno/Notte + bilingue IT/EN + audio ciclico -->
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -59,7 +59,7 @@ body{min-height:100svh;overflow-x:hidden}
 .categoryGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
 .sectionLabel{display:flex;align-items:center;gap:8px;margin:4px 2px 7px;font-size:11px;font-weight:1000;letter-spacing:.08em;color:#64758a}.sectionLabel:after{content:"";height:1px;flex:1;background:rgba(81,63,42,.16)}.expansionGrid{margin-top:0}.catCard.expansionCard{position:relative;overflow:hidden}.catCard.expansionCard:after{content:"ESP";position:absolute;right:4px;top:3px;font-size:7px;font-weight:1000;letter-spacing:.05em;opacity:.45}
 .catCard{background:#fffaf0;border:1px solid rgba(94,64,31,.13);border-radius:15px;padding:7px 4px 5px;text-align:center;box-shadow:0 3px 7px rgba(66,43,19,.06)}
-.catIcon{width:28px;height:28px;margin:0 auto 2px}.catIcon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.musicSvg .filled{fill:currentColor;stroke:none}.face .musicSvg .filled{fill:var(--iconColor,#fff)}.catIcon .musicSvg .filled,.symbolVisual .musicSvg .filled,.slotSymbol .musicSvg .filled{fill:currentColor}.customBtn.fixedMusic{opacity:.74;cursor:default}.catName{font-size:10px;font-weight:1000;white-space:nowrap}.miniStepper{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:4px}.miniStepper button{border:0;width:24px;height:24px;border-radius:8px;background:#e9eef5;font-size:17px;font-weight:1000;cursor:pointer}.miniStepper b{min-width:16px}
+.catIcon{width:28px;height:28px;margin:0 auto 2px}.catIcon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.musicSvg .filled{fill:currentColor;stroke:none}.face .musicSvg .filled{fill:var(--iconColor,#fff)}.face .pipSvg{width:76%;height:76%}.face .pipSvg .filled{fill:var(--iconColor,#111827)}.catIcon .musicSvg .filled,.symbolVisual .musicSvg .filled,.slotSymbol .musicSvg .filled{fill:currentColor}.catIcon.categoryFixedIcon svg{width:32px;height:32px;stroke-width:2}.catIcon.categoryFixedIcon .filled{fill:currentColor;stroke:none}.customBtn.fixedMusic{opacity:.74;cursor:default}.catName{font-size:10px;font-weight:1000;white-space:nowrap}.miniStepper{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:4px}.miniStepper button{border:0;width:24px;height:24px;border-radius:8px;background:#e9eef5;font-size:17px;font-weight:1000;cursor:pointer}.miniStepper b{min-width:16px}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.primary{grid-column:1/-1;border:0;border-radius:20px;padding:15px 14px;background:linear-gradient(#194982,#0f315d);color:#fff;font-size:clamp(20px,5vw,28px);font-weight:1000;box-shadow:inset 0 1px rgba(255,255,255,.25),0 5px 0 #0a274c,0 10px 18px rgba(19,59,112,.22);cursor:pointer}.secondary{border:1px solid #ceb892;border-radius:16px;padding:11px 8px;background:#fff8ea;font-weight:1000;cursor:pointer;font-size:clamp(11px,2.7vw,15px);white-space:nowrap}.primary:active,.secondary:active,.iconBtn:active,.stepBtn:active,.miniStepper button:active{transform:translateY(2px)}
 .helper{text-align:center;font-size:11px;color:#68778a;margin:5px 0 0}.hidden{display:none!important}
 .toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(20px);background:#112f58;color:white;padding:10px 15px;border-radius:999px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.22s;z-index:99;font-weight:800}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -250,7 +250,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
 <div class="modalOverlay hidden" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
   <div class="customModal infoModal">
     <div class="customHeader">
-      <div><small>STORYDICE! · v0.6.8</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
+      <div><small>STORYDICE! · v0.6.9</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
       <button class="closeModal" id="closeInfo" aria-label="Chiudi">×</button>
     </div>
     <div class="infoBody">
@@ -280,6 +280,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
 <script>
 const svg=(body)=>`<svg viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;
 const msvg=(body)=>`<svg class="musicSvg" viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;
+const psvg=(body)=>`<svg class="pipSvg" viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;
 const I={
  key:svg('<circle cx="8" cy="8" r="4"/><path d="M11 11l9 9M15 15l2-2M17.5 17.5l2-2"/>'),
  book:svg('<path d="M3 5.5c3-1 6-.6 9 1.5v12c-3-2.1-6-2.5-9-1.5zM21 5.5c-3-1-6-.6-9 1.5v12c3-2.1 6-2.5 9-1.5z"/>'),
@@ -429,12 +430,14 @@ Object.assign(I,{
 });
 
 Object.assign(I,{
-  pip_1:msvg('<circle class="filled" cx="12" cy="12" r="2.35"/>'),
-  pip_2:msvg('<circle class="filled" cx="7" cy="7" r="2.15"/><circle class="filled" cx="17" cy="17" r="2.15"/>'),
-  pip_3:msvg('<circle class="filled" cx="7" cy="7" r="2.05"/><circle class="filled" cx="12" cy="12" r="2.05"/><circle class="filled" cx="17" cy="17" r="2.05"/>'),
-  pip_4:msvg('<circle class="filled" cx="7" cy="7" r="2.05"/><circle class="filled" cx="17" cy="7" r="2.05"/><circle class="filled" cx="7" cy="17" r="2.05"/><circle class="filled" cx="17" cy="17" r="2.05"/>'),
-  pip_5:msvg('<circle class="filled" cx="7" cy="7" r="2"/><circle class="filled" cx="17" cy="7" r="2"/><circle class="filled" cx="12" cy="12" r="2"/><circle class="filled" cx="7" cy="17" r="2"/><circle class="filled" cx="17" cy="17" r="2"/>'),
-  pip_6:msvg('<circle class="filled" cx="7" cy="6" r="1.95"/><circle class="filled" cx="17" cy="6" r="1.95"/><circle class="filled" cx="7" cy="12" r="1.95"/><circle class="filled" cx="17" cy="12" r="1.95"/><circle class="filled" cx="7" cy="18" r="1.95"/><circle class="filled" cx="17" cy="18" r="1.95"/>')
+  pip_1:psvg('<circle class="filled" cx="12" cy="12" r="3.25"/>'),
+  pip_2:psvg('<circle class="filled" cx="5.7" cy="5.7" r="2.95"/><circle class="filled" cx="18.3" cy="18.3" r="2.95"/>'),
+  pip_3:psvg('<circle class="filled" cx="5.7" cy="5.7" r="2.85"/><circle class="filled" cx="12" cy="12" r="2.85"/><circle class="filled" cx="18.3" cy="18.3" r="2.85"/>'),
+  pip_4:psvg('<circle class="filled" cx="5.7" cy="5.7" r="2.75"/><circle class="filled" cx="18.3" cy="5.7" r="2.75"/><circle class="filled" cx="5.7" cy="18.3" r="2.75"/><circle class="filled" cx="18.3" cy="18.3" r="2.75"/>'),
+  pip_5:psvg('<circle class="filled" cx="5.7" cy="5.7" r="2.7"/><circle class="filled" cx="18.3" cy="5.7" r="2.7"/><circle class="filled" cx="12" cy="12" r="2.7"/><circle class="filled" cx="5.7" cy="18.3" r="2.7"/><circle class="filled" cx="18.3" cy="18.3" r="2.7"/>'),
+  pip_6:psvg('<circle class="filled" cx="5.7" cy="5.1" r="2.55"/><circle class="filled" cx="18.3" cy="5.1" r="2.55"/><circle class="filled" cx="5.7" cy="12" r="2.55"/><circle class="filled" cx="18.3" cy="12" r="2.55"/><circle class="filled" cx="5.7" cy="18.9" r="2.55"/><circle class="filled" cx="18.3" cy="18.9" r="2.55"/>'),
+  cat_music:svg('<path d="M10 17.5a3 2.4 0 11-2.6-2.4V6l10-2v10.5a3 2.4 0 11-2.6-2.4V7.2L10 8.1z"/><path d="M10 6l7.4-1.5"/>'),
+  cat_dice:svg('<rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle class="filled" cx="8" cy="8" r="1.45"/><circle class="filled" cx="16" cy="8" r="1.45"/><circle class="filled" cx="12" cy="12" r="1.45"/><circle class="filled" cx="8" cy="16" r="1.45"/><circle class="filled" cx="16" cy="16" r="1.45"/>')
 });
 
 const EMOJI={
@@ -739,8 +742,8 @@ const expansions={
  sport:{label:'SPORT',hex:'#2686c9',isExpansion:true,icons:['spo_basket','spo_football','spo_tennis','spo_climb','spo_gym','spo_boxing','spo_diving','spo_archery','spo_pingpong','spo_billiards','spo_hockey','spo_martial','spo_skating','spo_rollers','spo_parachute','spo_ski','spo_weights','spo_fencing','spo_golf','spo_horse','spo_surf','spo_yoga','spo_swim','spo_cycle']},
  food:{label:'CIBO',hex:'#e66b2e',isExpansion:true,icons:['food_pear','food_orange','food_watermelon','food_grapes','food_strawberry','food_blueberries','food_pineapple','food_cherries','food_coconut','food_tomato','food_eggplant','food_chili','food_corn','food_carrot','food_onion','food_potato','food_pretzel','food_cheese','food_egg','food_steak','food_chicken','food_burger','food_fries','food_pizza']},
  fantasy:{label:'FANTASY',hex:'#9b4dcc',isExpansion:true,icons:['fan_ghost','fan_pumpkin','fan_alien','fan_invader','fan_robot','fan_magewoman','fan_superhero','fan_santa','fan_vampire','fan_wizard','fan_zombie','fan_genie','fan_mermaid','fan_fairy','fan_unicorn','fan_dragonface','fan_phoenix','fan_snowman','fan_crystal','fan_wand','fan_biohazard','fan_dragon','fan_testtube','fan_alembic']},
- music:{label:'MUSICA',hex:'#26344a',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:4,mixedMaxDice:1,fixed:true,icons:['mus_quarter','mus_eighthpair','mus_triplet','mus_four16','mus_16_16_8','mus_8_16_16']},
- dice:{label:'DADI',hex:'#4b5563',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:4,mixedMaxDice:1,fixed:true,icons:['pip_1','pip_2','pip_3','pip_4','pip_5','pip_6']}
+ music:{label:'MUSICA',hex:'#26344a',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:4,mixedMaxDice:1,fixed:true,categoryIcon:'cat_music',icons:['mus_quarter','mus_eighthpair','mus_triplet','mus_four16','mus_16_16_8','mus_8_16_16']},
+ dice:{label:'DADI',hex:'#4b5563',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:4,mixedMaxDice:1,fixed:true,categoryIcon:'cat_dice',icons:['pip_1','pip_2','pip_3','pip_4','pip_5','pip_6']}
 };
 const catKeys=Object.keys(categories), expansionKeys=Object.keys(expansions), allKeys=[...catKeys,...expansionKeys];
 const allCategories={...categories,...expansions};
@@ -825,7 +828,8 @@ function buildCategoryUI(){
     let fixedLabel=k==='music'?tr('♫ DADI FISSI','♫ FIXED DICE'):tr('⚄ DADI FISSI','⚄ FIXED DICE');
     let tool=c.fixed?`<div class="catTools"><button class="customBtn fixedMusic" disabled>${fixedLabel}</button></div>`:`<div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}</button></div>`;
     let status=c.fixed?tr('1–4 dadi identici · 6 facce fisse','1–4 identical dice · 6 fixed faces'):(customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates'));
-    el.innerHTML=`<div class="catIcon">${symbolMarkup(c.icons[0])}</div><div class="catName">${catLabel(k)}</div><div class="miniStepper"><button data-cat="${k}" data-delta="-1">−</button><b id="count-${k}">${counts[k]}</b><button data-cat="${k}" data-delta="1">+</button></div>${tool}<div class="catStatus" id="status-${k}">${status}</div>`;
+    let catIconMarkup=c.categoryIcon?(I[c.categoryIcon]||symbolMarkup(c.icons[0])):symbolMarkup(c.icons[0]);
+    el.innerHTML=`<div class="catIcon ${c.categoryIcon?'categoryFixedIcon':''}">${catIconMarkup}</div><div class="catName">${catLabel(k)}</div><div class="miniStepper"><button data-cat="${k}" data-delta="-1">−</button><b id="count-${k}">${counts[k]}</b><button data-cat="${k}" data-delta="1">+</button></div>${tool}<div class="catStatus" id="status-${k}">${status}</div>`;
     (c.isExpansion?expGrid:baseGrid).appendChild(el)
   });
 }
@@ -915,7 +919,7 @@ function applyLanguage(){
   document.querySelector('#configModal .customHeader small').textContent=tr('LE TUE IMPOSTAZIONI','YOUR SETTINGS');document.getElementById('configTitle').textContent=tr('Configurazioni','Configurations');document.querySelector('#configModal .configIntro').textContent=tr('Salva combinazioni di dadi e personalizzazioni per richiamarle in un attimo. Il risultato del lancio non viene salvato: ogni partita resta nuova.','Save dice combinations and customizations so you can recall them instantly. Roll results are not saved: every game stays fresh.');
   const boxes=document.querySelectorAll('#configModal .configBoxTitle');if(boxes[0])boxes[0].textContent=tr('SALVA LA CONFIGURAZIONE ATTUALE','SAVE CURRENT CONFIGURATION');if(boxes[1])boxes[1].textContent=tr("ALL'AVVIO DELL'APP",'WHEN THE APP STARTS');if(boxes[2])boxes[2].textContent=tr('CONFIGURAZIONI SALVATE','SAVED CONFIGURATIONS');document.getElementById('configName').placeholder=tr('Es. Storia rapida, Fantasy, Classe 1A…','E.g. Quick story, Fantasy, Class 1A…');document.getElementById('saveCurrentConfig').textContent=tr('⭐ SALVA ATTUALE','⭐ SAVE CURRENT');document.querySelector('#configModal .startupRow label').textContent=tr('Riparti da','Start from');
   const sm=document.getElementById('startupMode');sm.options[0].text=tr('Ultima configurazione usata','Last used configuration');sm.options[1].text=tr('Configurazione ⭐ preferita','⭐ Favorite configuration');sm.options[2].text=tr('Impostazione standard','Standard setup');document.querySelector('#configModal .localNote').textContent=tr('🔒 Le configurazioni restano solo in questo browser/dispositivo.','🔒 Configurations stay only in this browser/device.');
-  document.getElementById('infoTitle').textContent=tr('Informazioni e istruzioni','Information and instructions');document.querySelector('#infoModal .customHeader small').textContent='STORYDICE! · v0.6.8';document.querySelector('#infoModal .infoBody').innerHTML=infoMarkup();
+  document.getElementById('infoTitle').textContent=tr('Informazioni e istruzioni','Information and instructions');document.querySelector('#infoModal .customHeader small').textContent='STORYDICE! · v0.6.9';document.querySelector('#infoModal .infoBody').innerHTML=infoMarkup();
   document.querySelectorAll('.closeModal').forEach(b=>b.setAttribute('aria-label',tr('Chiudi','Close')));document.getElementById('themeBtn').setAttribute('aria-label',tr('Tema giorno/notte','Day/night theme'));updateSoundButton();
   const p=document.getElementById('projectionBtn');p.setAttribute('aria-label',projection?tr('Esci dalla modalità proiezione','Exit projection mode'):tr('Modalità proiezione','Projection mode'));p.title=projection?tr('Esci da Proiezione','Exit Projection'):tr('Proiezione','Projection');
   buildCategoryUI();if(editingCat){document.getElementById('customTitle').textContent=catLabel(editingCat);renderCustomizer()}if(!document.getElementById('configModal').classList.contains('hidden'))renderConfigList();
