@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- STORYDICE! v0.6.7 — MUSICA fino a 4 dadi identici + bilingue IT/EN + audio ciclico -->
+<!-- STORYDICE! v0.6.8 — DADI classici + MUSICA fino a 4 dadi identici + Giorno/Notte + bilingue IT/EN + audio ciclico -->
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -156,7 +156,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
           <strong>Numero di dadi</strong>
           <div class="stepper"><button class="stepBtn" data-mixed="-1">−</button><span class="countBig" id="mixedCount">6</span><button class="stepBtn" data-mixed="1">+</button></div>
         </div>
-        <label class="expansionToggle" title="Se attivo, anche SPORT, CIBO e FANTASY possono essere scelti nella modalità Mista">
+        <label class="expansionToggle" title="Se attivo, anche SPORT, CIBO, FANTASY, MUSICA e DADI possono essere scelti nella modalità Mista">
           <input type="checkbox" id="mixedIncludeExpansions">
           <span>Includi espansioni</span>
         </label>
@@ -170,7 +170,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
           <strong>Numero di dadi bianchi</strong>
           <div class="stepper"><button class="stepBtn" data-free="-1">−</button><span class="countBig" id="freeCount">6</span><button class="stepBtn" data-free="1">+</button></div>
         </div>
-        <label class="expansionToggle" title="Se attivo, SPORT, CIBO e FANTASY entrano nel sorteggio delle facce">
+        <label class="expansionToggle" title="Se attivo, SPORT, CIBO, FANTASY, MUSICA e DADI entrano nel sorteggio delle facce">
           <input type="checkbox" id="includeExpansions">
           <span>Includi espansioni</span>
         </label>
@@ -250,7 +250,7 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
 <div class="modalOverlay hidden" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
   <div class="customModal infoModal">
     <div class="customHeader">
-      <div><small>STORYDICE! · v0.6.5</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
+      <div><small>STORYDICE! · v0.6.8</small><h2 id="infoTitle">Informazioni e istruzioni</h2></div>
       <button class="closeModal" id="closeInfo" aria-label="Chiudi">×</button>
     </div>
     <div class="infoBody">
@@ -263,14 +263,15 @@ body.dark .configStar.favorite{background:#645528;color:#fff3b0}.dark .configAct
           <div class="infoMode"><strong>◉ TEMATICA</strong><span>Decidi quanti dadi usare per ciascuna categoria o espansione.</span></div>
         </div>
       </div>
-      <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b> nelle categorie standard e nelle espansioni da 24 simboli. <b>MUSICA è l’eccezione intenzionale</b>: puoi usare da 1 a 4 dadi identici, ciascuno con le stesse 6 facce ritmiche.</p></div>
-      <div class="infoSection"><h3>Personalizza i dadi</h3><p>In modalità TEMATICA premi <b>PERSONALIZZA</b> sotto una categoria. Puoi scegliere esattamente le 6 facce di ciascun dado oppure usare <b>CASUALE</b>. I simboli già usati diventano indisponibili sugli altri dadi della stessa categoria. I dadi MUSICA mantengono invece le stesse 6 facce musicali fisse.</p></div>
+      <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b> nelle categorie standard e nelle espansioni da 24 simboli. <b>MUSICA e DADI sono eccezioni intenzionali</b>: puoi usare da 1 a 4 dadi fissi identici per ciascuno dei due set.</p></div>
+      <div class="infoSection"><h3>Personalizza i dadi</h3><p>In modalità TEMATICA premi <b>PERSONALIZZA</b> sotto una categoria. Puoi scegliere esattamente le 6 facce di ciascun dado oppure usare <b>CASUALE</b>. I simboli già usati diventano indisponibili sugli altri dadi della stessa categoria. I set MUSICA e DADI mantengono invece le proprie 6 facce fisse.</p></div>
       <div class="infoSection"><h3>Blocca e rilancia</h3><p>Dopo un lancio, tocca un dado per 🔒 <b>bloccarlo</b>. Premi <b>RILANCIA</b> per tirare di nuovo solo quelli non bloccati. Un altro tocco sblocca il dado.</p></div>
-      <div class="infoSection"><h3>Audio</h3><p>Il pulsante audio in alto ha tre stati: <b>🔊 D</b> = lancio digitale, <b>🔊 R</b> = registrazione realistica MP3 sincronizzata al numero di dadi, <b>🔇</b> = audio disattivato. Ogni tocco passa allo stato successivo.</p></div>
-      <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli; MUSICA aggiunge il dado bianco a 6 facce ritmiche. In MISTA e LIBERA le espansioni possono entrare nel sorteggio con la casella dedicata; in TEMATICA puoi scegliere da 1 a 4 dadi MUSICA identici.</p></div>
+      <div class="infoSection"><h3>Giorno / Notte</h3><p>Usa il pulsante <b>☾ / ☀</b> in alto per passare dal tema giorno al tema notte. La scelta viene ricordata su questo dispositivo.</p></div>
+  <div class="infoSection"><h3>Audio</h3><p>Il pulsante audio in alto ha tre stati: <b>🔊 D</b> = lancio digitale, <b>🔊 R</b> = registrazione realistica MP3 sincronizzata al numero di dadi, <b>🔇</b> = audio disattivato. Ogni tocco passa allo stato successivo.</p></div>
+      <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli; MUSICA aggiunge il dado bianco ritmico e DADI aggiunge il classico dado bianco a 6 facce con puntini neri. In MISTA e LIBERA le espansioni possono entrare nel sorteggio con la casella dedicata; in TEMATICA puoi scegliere da 1 a 4 dadi identici per ciascuno dei due set fissi.</p></div>
       <div class="infoSection"><h3>Salva configurazioni</h3><p>Premi <b>⭐ SALVA</b> per conservare le combinazioni che usi più spesso. Puoi caricarle, rinominarle, eliminarle e indicarne una come ⭐ preferita. L'app può anche riaprire automaticamente l'ultima configurazione usata.</p></div>
       <div class="infoSection"><h3>Proiezione</h3><p><b>PROIEZIONE</b> dà più spazio possibile ai dadi ed è pensata per LIM, monitor e schermi condivisi.</p></div>
-      <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 78 simboli · Totale: 222</small></div>
+      <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 84 simboli · Totale: 228</small></div>
     </div>
   </div>
 </div>
@@ -427,6 +428,15 @@ Object.assign(I,{
   mus_8_16_16:msvg('<ellipse class="filled" cx="5" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 5 18.2)"/><ellipse class="filled" cx="12" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 12 18.2)"/><ellipse class="filled" cx="19" cy="18.2" rx="2.55" ry="2.15" transform="rotate(-18 19 18.2)"/><path d="M7.2 17V5.8M14.2 17V5.8M21.2 17V5.8"/><path class="filled" d="M6.9 5h14.4v2.5H6.9zM14 8.4h7.3v2.1H14z"/>')
 });
 
+Object.assign(I,{
+  pip_1:msvg('<circle class="filled" cx="12" cy="12" r="2.35"/>'),
+  pip_2:msvg('<circle class="filled" cx="7" cy="7" r="2.15"/><circle class="filled" cx="17" cy="17" r="2.15"/>'),
+  pip_3:msvg('<circle class="filled" cx="7" cy="7" r="2.05"/><circle class="filled" cx="12" cy="12" r="2.05"/><circle class="filled" cx="17" cy="17" r="2.05"/>'),
+  pip_4:msvg('<circle class="filled" cx="7" cy="7" r="2.05"/><circle class="filled" cx="17" cy="7" r="2.05"/><circle class="filled" cx="7" cy="17" r="2.05"/><circle class="filled" cx="17" cy="17" r="2.05"/>'),
+  pip_5:msvg('<circle class="filled" cx="7" cy="7" r="2"/><circle class="filled" cx="17" cy="7" r="2"/><circle class="filled" cx="12" cy="12" r="2"/><circle class="filled" cx="7" cy="17" r="2"/><circle class="filled" cx="17" cy="17" r="2"/>'),
+  pip_6:msvg('<circle class="filled" cx="7" cy="6" r="1.95"/><circle class="filled" cx="17" cy="6" r="1.95"/><circle class="filled" cx="7" cy="12" r="1.95"/><circle class="filled" cx="17" cy="12" r="1.95"/><circle class="filled" cx="7" cy="18" r="1.95"/><circle class="filled" cx="17" cy="18" r="1.95"/>')
+});
+
 const EMOJI={
   obj_balloon:'🎈', obj_graduation:'🎓', obj_ring:'💍', obj_sunglasses:'🕶️', obj_umbrella:'🌂', obj_toast:'🥂',
   obj_telescope:'🔭', obj_scissors:'✂️', obj_football:'⚽️', obj_trophy:'🏆', obj_bin:'🗑️', obj_microphone:'🎤',
@@ -483,7 +493,8 @@ const L={
   spo_basket:'Basket',spo_football:'Football americano',spo_tennis:'Tennis',spo_climb:'Arrampicata',spo_gym:'Ginnastica',spo_boxing:'Boxe',spo_diving:'Immersione',spo_archery:"Tiro con l’arco",spo_pingpong:'Ping-pong',spo_billiards:'Biliardo',spo_hockey:'Hockey',spo_martial:'Arti marziali',spo_skating:'Pattinaggio',spo_rollers:'Pattini',spo_parachute:'Paracadutismo',spo_ski:'Sci',spo_weights:'Sollevamento pesi',spo_fencing:'Scherma',spo_golf:'Golf',spo_horse:'Equitazione',spo_surf:'Surf',spo_yoga:'Yoga',spo_swim:'Nuoto',spo_cycle:'Ciclismo',
   food_pear:'Pera',food_orange:'Arancia',food_watermelon:'Anguria',food_grapes:'Uva',food_strawberry:'Fragola',food_blueberries:'Mirtilli',food_pineapple:'Ananas',food_cherries:'Ciliegie',food_coconut:'Cocco',food_tomato:'Pomodoro',food_eggplant:'Melanzana',food_chili:'Peperoncino',food_corn:'Mais',food_carrot:'Carota',food_onion:'Cipolla',food_potato:'Patata',food_pretzel:'Pretzel',food_cheese:'Formaggio',food_egg:'Uovo',food_steak:'Bistecca',food_chicken:'Pollo',food_burger:'Hamburger',food_fries:'Patatine',food_pizza:'Pizza',
   fan_ghost:'Fantasma',fan_pumpkin:'Zucca',fan_alien:'Alieno',fan_invader:'Mostro alieno',fan_robot:'Robot',fan_magewoman:'Maga',fan_superhero:'Supereroe',fan_santa:'Babbo Natale',fan_vampire:'Vampiro',fan_wizard:'Mago',fan_zombie:'Zombie',fan_genie:'Genio',fan_mermaid:'Sirena',fan_fairy:'Fata',fan_unicorn:'Unicorno',fan_dragonface:'Testa di drago',fan_phoenix:'Fenice',fan_snowman:'Pupazzo di neve',fan_crystal:'Sfera di cristallo',fan_wand:'Bacchetta magica',fan_biohazard:'Pericolo biologico',fan_dragon:'Drago',fan_testtube:'Provetta',fan_alembic:'Alambicco',
-  mus_quarter:'Semiminima',mus_eighthpair:'Due crome',mus_triplet:'Terzina di crome',mus_four16:'Quattro semicrome',mus_16_16_8:'Due semicrome + croma',mus_8_16_16:'Croma + due semicrome'
+  mus_quarter:'Semiminima',mus_eighthpair:'Due crome',mus_triplet:'Terzina di crome',mus_four16:'Quattro semicrome',mus_16_16_8:'Due semicrome + croma',mus_8_16_16:'Croma + due semicrome',
+  pip_1:'Uno',pip_2:'Due',pip_3:'Tre',pip_4:'Quattro',pip_5:'Cinque',pip_6:'Sei'
 };
 const L_EN={
   obj_balloon:"Balloon",
@@ -707,11 +718,12 @@ const L_EN={
   mus_triplet:"Eighth-note triplet",
   mus_four16:"Four sixteenth notes",
   mus_16_16_8:"Two sixteenth notes + eighth",
-  mus_8_16_16:"Eighth + two sixteenth notes"
+  mus_8_16_16:"Eighth + two sixteenth notes",
+  pip_1:"One",pip_2:"Two",pip_3:"Three",pip_4:"Four",pip_5:"Five",pip_6:"Six"
 };
 let language='it';
 function symbolLabel(id){return language==='en'?(L_EN[id]||L[id]||id):(L[id]||id)}
-function catLabel(k){const en={objects:'OBJECTS',places:'PLACES',emotions:'EMOTIONS',animals:'ANIMALS',concepts:'CONCEPTS',nature:'NATURE',sport:'SPORT',food:'FOOD',fantasy:'FANTASY',music:'MUSIC'};return language==='en'?(en[k]||allCategories?.[k]?.label||k):(allCategories?.[k]?.label||k)}
+function catLabel(k){const en={objects:'OBJECTS',places:'PLACES',emotions:'EMOTIONS',animals:'ANIMALS',concepts:'CONCEPTS',nature:'NATURE',sport:'SPORT',food:'FOOD',fantasy:'FANTASY',music:'MUSIC',dice:'DICE'};return language==='en'?(en[k]||allCategories?.[k]?.label||k):(allCategories?.[k]?.label||k)}
 function tr(it,en){return language==='en'?en:it}
 function symbolMarkup(id){return EMOJI[id]?`<span class="emojiFace" role="img" aria-label="${symbolLabel(id)}">${EMOJI[id]}</span>`:(I[id]||svg('<circle cx="12" cy="12" r="8"/>'));}
 
@@ -727,7 +739,8 @@ const expansions={
  sport:{label:'SPORT',hex:'#2686c9',isExpansion:true,icons:['spo_basket','spo_football','spo_tennis','spo_climb','spo_gym','spo_boxing','spo_diving','spo_archery','spo_pingpong','spo_billiards','spo_hockey','spo_martial','spo_skating','spo_rollers','spo_parachute','spo_ski','spo_weights','spo_fencing','spo_golf','spo_horse','spo_surf','spo_yoga','spo_swim','spo_cycle']},
  food:{label:'CIBO',hex:'#e66b2e',isExpansion:true,icons:['food_pear','food_orange','food_watermelon','food_grapes','food_strawberry','food_blueberries','food_pineapple','food_cherries','food_coconut','food_tomato','food_eggplant','food_chili','food_corn','food_carrot','food_onion','food_potato','food_pretzel','food_cheese','food_egg','food_steak','food_chicken','food_burger','food_fries','food_pizza']},
  fantasy:{label:'FANTASY',hex:'#9b4dcc',isExpansion:true,icons:['fan_ghost','fan_pumpkin','fan_alien','fan_invader','fan_robot','fan_magewoman','fan_superhero','fan_santa','fan_vampire','fan_wizard','fan_zombie','fan_genie','fan_mermaid','fan_fairy','fan_unicorn','fan_dragonface','fan_phoenix','fan_snowman','fan_crystal','fan_wand','fan_biohazard','fan_dragon','fan_testtube','fan_alembic']},
- music:{label:'MUSICA',hex:'#26344a',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:4,mixedMaxDice:1,fixed:true,icons:['mus_quarter','mus_eighthpair','mus_triplet','mus_four16','mus_16_16_8','mus_8_16_16']}
+ music:{label:'MUSICA',hex:'#26344a',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:4,mixedMaxDice:1,fixed:true,icons:['mus_quarter','mus_eighthpair','mus_triplet','mus_four16','mus_16_16_8','mus_8_16_16']},
+ dice:{label:'DADI',hex:'#4b5563',dieHex:'#f8f7f2',iconColor:'#111827',isExpansion:true,maxDice:4,mixedMaxDice:1,fixed:true,icons:['pip_1','pip_2','pip_3','pip_4','pip_5','pip_6']}
 };
 const catKeys=Object.keys(categories), expansionKeys=Object.keys(expansions), allKeys=[...catKeys,...expansionKeys];
 const allCategories={...categories,...expansions};
@@ -809,7 +822,8 @@ function makeDie(kind,cat,icons){return {id:uuid(),kind,cat,icons:[...icons],fac
 function buildCategoryUI(){
   const baseGrid=document.getElementById('categoryGrid'),expGrid=document.getElementById('expansionGrid');baseGrid.innerHTML='';expGrid.innerHTML='';
   allKeys.forEach(k=>{let c=allCategories[k];let el=document.createElement('div');el.className='catCard'+(c.isExpansion?' expansionCard':'');el.style.color=c.hex;
-    let tool=c.fixed?`<div class="catTools"><button class="customBtn fixedMusic" disabled>${tr('♫ DADI FISSI','♫ FIXED DICE')}</button></div>`:`<div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}</button></div>`;
+    let fixedLabel=k==='music'?tr('♫ DADI FISSI','♫ FIXED DICE'):tr('⚄ DADI FISSI','⚄ FIXED DICE');
+    let tool=c.fixed?`<div class="catTools"><button class="customBtn fixedMusic" disabled>${fixedLabel}</button></div>`:`<div class="catTools"><button class="customBtn ${customEnabled[k]?'customized':''}" data-custom="${k}">${customEnabled[k]?tr('✓ PERSONALIZZATO','✓ CUSTOM'):tr('✎ PERSONALIZZA','✎ CUSTOMIZE')}</button></div>`;
     let status=c.fixed?tr('1–4 dadi identici · 6 facce fisse','1–4 identical dice · 6 fixed faces'):(customEnabled[k]?tr('facce scelte da te','faces chosen by you'):tr('AUTO · senza doppioni','AUTO · no duplicates'));
     el.innerHTML=`<div class="catIcon">${symbolMarkup(c.icons[0])}</div><div class="catName">${catLabel(k)}</div><div class="miniStepper"><button data-cat="${k}" data-delta="-1">−</button><b id="count-${k}">${counts[k]}</b><button data-cat="${k}" data-delta="1">+</button></div>${tool}<div class="catStatus" id="status-${k}">${status}</div>`;
     (c.isExpansion?expGrid:baseGrid).appendChild(el)
@@ -865,14 +879,15 @@ document.getElementById('closeCustom').addEventListener('click',closeCustomizer)
 function infoMarkup(){
   if(language==='en')return `<div class="infoHero"><div class="bigDie">🎲</div><div><strong>Roll. Look. Imagine.</strong><span>Use the symbols you get to invent a story, a sentence, a dialogue or a creative challenge.</span></div></div>
   <div class="infoSection"><h3>Three ways to play</h3><div class="infoModes"><div class="infoMode"><strong>◈ MIXED</strong><span>Randomly chooses dice from the categories. Each die keeps its category color.</span></div><div class="infoMode"><strong>◇ FREE</strong><span>Creates white dice: every face is drawn freely from all available categories.</span></div><div class="infoMode"><strong>◉ THEMED</strong><span>Choose how many dice to use for each category or expansion.</span></div></div></div>
-  <div class="infoSection"><h3>No duplicates</h3><p>Each symbol can appear <b>only once in the same roll</b> in the standard categories and 24-symbol expansions. <b>MUSIC is the intentional exception</b>: you can use 1 to 4 identical dice, each with the same 6 rhythm faces.</p></div>
-  <div class="infoSection"><h3>Customize the dice</h3><p>In THEMED mode press <b>CUSTOMIZE</b> under a category. You can choose the exact 6 faces of each die or use <b>RANDOM</b>. Symbols already used become unavailable on the other dice in the same category. The MUSIC dice keep the same six fixed musical faces.</p></div>
+  <div class="infoSection"><h3>No duplicates</h3><p>Each symbol can appear <b>only once in the same roll</b> in the standard categories and 24-symbol expansions. <b>MUSIC and DICE are intentional exceptions</b>: you can use 1 to 4 identical fixed dice in either set.</p></div>
+  <div class="infoSection"><h3>Customize the dice</h3><p>In THEMED mode press <b>CUSTOMIZE</b> under a category. You can choose the exact 6 faces of each die or use <b>RANDOM</b>. Symbols already used become unavailable on the other dice in the same category. The MUSIC and DICE sets keep their own six fixed faces.</p></div>
   <div class="infoSection"><h3>Lock and reroll</h3><p>After a roll, tap a die to 🔒 <b>lock it</b>. Press <b>REROLL</b> to roll only the unlocked dice. Tap a locked die again to unlock it.</p></div>
+  <div class="infoSection"><h3>Day / Night</h3><p>Use the <b>☾ / ☀</b> button at the top to switch between day and night themes. Your choice is remembered on this device.</p></div>
   <div class="infoSection"><h3>Audio</h3><p>The audio button has three states: <b>🔊 D</b> = digital roll, <b>🔊 R</b> = realistic MP3 recording matched to the number of dice, <b>🔇</b> = audio off. Each tap moves to the next state.</p></div>
-  <div class="infoSection"><h3>Expansions</h3><p>SPORT, FOOD and FANTASY add 72 symbols, while MUSIC adds the fixed white six-faced rhythm die. In MIXED and FREE modes expansions can join the draw with the dedicated checkbox; in THEMED mode you can choose 1 to 4 identical MUSIC dice.</p></div>
+  <div class="infoSection"><h3>Expansions</h3><p>SPORT, FOOD and FANTASY add 72 symbols; MUSIC adds the fixed white rhythm die, and DICE adds the standard white six-sided die with black pips. In MIXED and FREE modes expansions can join the draw with the dedicated checkbox; in THEMED mode you can choose 1 to 4 identical dice from either fixed set.</p></div>
   <div class="infoSection"><h3>Save configurations</h3><p>Press <b>⭐ SAVE</b> to keep the combinations you use most often. You can load, rename and delete them, and mark one as your ⭐ favorite. The app can also reopen the last configuration automatically.</p></div>
   <div class="infoSection"><h3>Projection</h3><p><b>PROJECTION</b> gives the dice as much screen space as possible and is designed for interactive whiteboards, monitors and shared screens.</p></div>
-  <div class="creditsBox"><strong>STORYDICE!</strong><span>Created by Flavio Naretti</span><small>Base set: 144 symbols · Expansions: 78 symbols · Total: 222</small></div>`;
+  <div class="creditsBox"><strong>STORYDICE!</strong><span>Created by Flavio Naretti</span><small>Base set: 144 symbols · Expansions: 84 symbols · Total: 228</small></div>`;
   return `<div class="infoHero"><div class="bigDie">🎲</div><div><strong>Lancia. Osserva. Immagina.</strong><span>Usa i simboli ottenuti per inventare una storia, una frase, un dialogo o una sfida creativa.</span></div></div>
   <div class="infoSection"><h3>Tre modi di giocare</h3><div class="infoModes"><div class="infoMode"><strong>◈ MISTA</strong><span>Sceglie dadi casualmente tra le categorie. Ogni dado mantiene il proprio colore.</span></div><div class="infoMode"><strong>◇ LIBERA</strong><span>Crea dadi bianchi: ogni faccia pesca liberamente da tutte le categorie disponibili.</span></div><div class="infoMode"><strong>◉ TEMATICA</strong><span>Decidi quanti dadi usare per ciascuna categoria o espansione.</span></div></div></div>
   <div class="infoSection"><h3>Mai ripetizioni</h3><p>Ogni simbolo può comparire <b>una sola volta nello stesso lancio</b> nelle categorie standard e nelle espansioni da 24 simboli. <b>MUSICA è l’eccezione intenzionale</b>: puoi usare da 1 a 4 dadi identici, ciascuno con le stesse 6 facce ritmiche.</p></div>
@@ -882,7 +897,7 @@ function infoMarkup(){
   <div class="infoSection"><h3>Espansioni</h3><p>SPORT, CIBO e FANTASY aggiungono 72 simboli; MUSICA aggiunge il dado bianco a 6 facce ritmiche. In MISTA e LIBERA le espansioni possono entrare nel sorteggio con la casella dedicata; in TEMATICA puoi scegliere da 1 a 4 dadi MUSICA identici.</p></div>
   <div class="infoSection"><h3>Salva configurazioni</h3><p>Premi <b>⭐ SALVA</b> per conservare le combinazioni che usi più spesso. Puoi caricarle, rinominarle, eliminarle e indicarne una come ⭐ preferita. L'app può anche riaprire automaticamente l'ultima configurazione usata.</p></div>
   <div class="infoSection"><h3>Proiezione</h3><p><b>PROIEZIONE</b> dà più spazio possibile ai dadi ed è pensata per LIM, monitor e schermi condivisi.</p></div>
-  <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 78 simboli · Totale: 222</small></div>`;
+  <div class="creditsBox"><strong>STORYDICE!</strong><span>Ideato da Flavio Naretti</span><small>Set base: 144 simboli · Espansioni: 84 simboli · Totale: 228</small></div>`;
 }
 function applyLanguage(){
   document.documentElement.lang=language;
@@ -892,7 +907,7 @@ function applyLanguage(){
   document.querySelector('[data-mode="mixed"]').innerHTML=`◈ &nbsp; ${tr('MISTA','MIXED')}`;document.querySelector('[data-mode="free"]').innerHTML=`◇ &nbsp; ${tr('LIBERA','FREE')}`;document.querySelector('[data-mode="themed"]').innerHTML=`◉ &nbsp; ${tr('TEMATICA','THEMED')}`;
   document.querySelector('#mixedPane .countRow strong').textContent=tr('Numero di dadi','Number of dice');document.querySelector('#freePane .countRow strong').textContent=tr('Numero di dadi bianchi','Number of white dice');
   document.querySelector('#mixedPane .expansionToggle span').textContent=tr('Includi espansioni','Include expansions');document.querySelector('#freePane .expansionToggle span').textContent=tr('Includi espansioni','Include expansions');
-  document.querySelector('#mixedPane .expansionToggle').title=tr('Se attivo, anche SPORT, CIBO e FANTASY possono essere scelti nella modalità Mista','If enabled, SPORT, FOOD and FANTASY can also be chosen in Mixed mode');document.querySelector('#freePane .expansionToggle').title=tr('Se attivo, SPORT, CIBO e FANTASY entrano nel sorteggio delle facce','If enabled, SPORT, FOOD and FANTASY are included when drawing faces');
+  document.querySelector('#mixedPane .expansionToggle').title=tr('Se attivo, anche SPORT, CIBO, FANTASY, MUSICA e DADI possono essere scelti nella modalità Mista','If enabled, SPORT, FOOD, FANTASY, MUSIC and DICE can also be chosen in Mixed mode');document.querySelector('#freePane .expansionToggle').title=tr('Se attivo, SPORT, CIBO, FANTASY, MUSICA e DADI entrano nel sorteggio delle facce','If enabled, SPORT, FOOD, FANTASY, MUSIC and DICE are included when drawing faces');
   document.querySelector('#mixedPane .freeNote').textContent=tr('Ogni dado appartiene a una categoria; nessun simbolo viene ripetuto.','Each die belongs to one category; no symbol is repeated.');document.querySelector('#freePane .freeNote').textContent=tr("Le facce pescano dall'intera collezione, sempre senza ripetizioni.",'Faces are drawn from the whole collection, always with no duplicates.');
   const secs=document.querySelectorAll('#themedPane .sectionLabel');if(secs[0])secs[0].textContent=tr('SET BASE','BASE SET');if(secs[1])secs[1].textContent=tr('ESPANSIONI','EXPANSIONS');
   document.getElementById('rollBtn').innerHTML=`🎲 &nbsp; ${tr('LANCIA I DADI','ROLL DICE')}`;document.getElementById('rerollBtn').innerHTML=`↻ &nbsp; ${tr('RILANCIA','REROLL')}`;document.getElementById('saveConfigBtn').innerHTML=`⭐ &nbsp; ${tr('SALVA','SAVE')}`;document.querySelector('.helper').textContent=tr('Tocca un dado per bloccarlo. Toccalo di nuovo per sbloccarlo.','Tap a die to lock it. Tap it again to unlock it.');
@@ -900,7 +915,7 @@ function applyLanguage(){
   document.querySelector('#configModal .customHeader small').textContent=tr('LE TUE IMPOSTAZIONI','YOUR SETTINGS');document.getElementById('configTitle').textContent=tr('Configurazioni','Configurations');document.querySelector('#configModal .configIntro').textContent=tr('Salva combinazioni di dadi e personalizzazioni per richiamarle in un attimo. Il risultato del lancio non viene salvato: ogni partita resta nuova.','Save dice combinations and customizations so you can recall them instantly. Roll results are not saved: every game stays fresh.');
   const boxes=document.querySelectorAll('#configModal .configBoxTitle');if(boxes[0])boxes[0].textContent=tr('SALVA LA CONFIGURAZIONE ATTUALE','SAVE CURRENT CONFIGURATION');if(boxes[1])boxes[1].textContent=tr("ALL'AVVIO DELL'APP",'WHEN THE APP STARTS');if(boxes[2])boxes[2].textContent=tr('CONFIGURAZIONI SALVATE','SAVED CONFIGURATIONS');document.getElementById('configName').placeholder=tr('Es. Storia rapida, Fantasy, Classe 1A…','E.g. Quick story, Fantasy, Class 1A…');document.getElementById('saveCurrentConfig').textContent=tr('⭐ SALVA ATTUALE','⭐ SAVE CURRENT');document.querySelector('#configModal .startupRow label').textContent=tr('Riparti da','Start from');
   const sm=document.getElementById('startupMode');sm.options[0].text=tr('Ultima configurazione usata','Last used configuration');sm.options[1].text=tr('Configurazione ⭐ preferita','⭐ Favorite configuration');sm.options[2].text=tr('Impostazione standard','Standard setup');document.querySelector('#configModal .localNote').textContent=tr('🔒 Le configurazioni restano solo in questo browser/dispositivo.','🔒 Configurations stay only in this browser/device.');
-  document.getElementById('infoTitle').textContent=tr('Informazioni e istruzioni','Information and instructions');document.querySelector('#infoModal .customHeader small').textContent='STORYDICE! · v0.6.5';document.querySelector('#infoModal .infoBody').innerHTML=infoMarkup();
+  document.getElementById('infoTitle').textContent=tr('Informazioni e istruzioni','Information and instructions');document.querySelector('#infoModal .customHeader small').textContent='STORYDICE! · v0.6.8';document.querySelector('#infoModal .infoBody').innerHTML=infoMarkup();
   document.querySelectorAll('.closeModal').forEach(b=>b.setAttribute('aria-label',tr('Chiudi','Close')));document.getElementById('themeBtn').setAttribute('aria-label',tr('Tema giorno/notte','Day/night theme'));updateSoundButton();
   const p=document.getElementById('projectionBtn');p.setAttribute('aria-label',projection?tr('Esci dalla modalità proiezione','Exit projection mode'):tr('Modalità proiezione','Projection mode'));p.title=projection?tr('Esci da Proiezione','Exit Projection'):tr('Proiezione','Projection');
   buildCategoryUI();if(editingCat){document.getElementById('customTitle').textContent=catLabel(editingCat);renderCustomizer()}if(!document.getElementById('configModal').classList.contains('hidden'))renderConfigList();
